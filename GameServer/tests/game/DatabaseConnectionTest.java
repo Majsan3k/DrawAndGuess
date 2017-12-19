@@ -15,7 +15,7 @@ public class DatabaseConnectionTest {
 
     @Test
     public void testCreateUser(){
-        dbCon.createUser("Test", "t");
+        assertEquals("OK", dbCon.createUser("Rarararaa", "tasdadasda"));
     }
 
     @Test

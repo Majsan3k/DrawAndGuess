@@ -58,13 +58,21 @@ public class DatabaseConnection {
 
     public String createUser(String userName, String password) {
         connectToDb();
+        int userId = 0;
 
         try {
             prepStmt = dbCon.prepareStatement(CREATE_USER);
             prepStmt.setString(1, userName);
             prepStmt.setString(2, password);
             prepStmt.execute();
-        } catch (SQLException e) {
+
+            ResultSet rs = prepStmt.getGeneratedKeys();
+                if(rs.next()){
+                    userId = rs.getInt(1);
+                }
+                insertScore(0, userId);
+
+    } catch (SQLException e) {
             if(e.getMessage().contains("Duplicate entry")){
                 return "The username already exists";
             }
@@ -73,7 +81,6 @@ public class DatabaseConnection {
         } finally {
             close();
         }
-
         return "OK";
     }
 

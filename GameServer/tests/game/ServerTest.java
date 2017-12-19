@@ -10,7 +10,5 @@ public class ServerTest {
     public void testaLogin(){
         Server server = new Server(2000);
 
-
-
     }
 }
