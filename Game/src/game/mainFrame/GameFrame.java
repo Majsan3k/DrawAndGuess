@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 
 public class GameFrame extends JFrame{
 
@@ -52,7 +53,7 @@ public class GameFrame extends JFrame{
         loginMode();
 
         //TODO: Ta bort, bara för testning
-        loginRequest("Robert", "aabbcc");
+        loginRequest("Maja", "aaaaaa");
 
         pack();
         setVisible(true);
@@ -78,7 +79,8 @@ public class GameFrame extends JFrame{
         add(highScorePanel, BorderLayout.WEST);
         add(new GamePanel(paper), BorderLayout.CENTER);
         add(chattPanel, BorderLayout.EAST);
-
+        serverPrint.writeToServer("getdrawing" );
+        drawFirstLogIn();
         pack();
         repaint();
     }
@@ -92,6 +94,13 @@ public class GameFrame extends JFrame{
         ArrayList<Score> scores = serverReader.getHighScore();
         Collections.sort(scores);
         highScorePanel.fillHighscoreField(scores);
+    }
+
+    public synchronized void drawFirstLogIn(){
+        serverPrint.writeToServer("getdrawing");
+        HashSet<Point> drawing = serverReader.getDrawing();
+        paper.setDrawing(drawing);
+        paper.repaint();
     }
 
     public void signUp(){

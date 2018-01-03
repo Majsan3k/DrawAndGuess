@@ -2,12 +2,14 @@ package game;
 
 import game.database.Score;
 
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class PlayerHandler implements Runnable {
 
@@ -16,6 +18,7 @@ public class PlayerHandler implements Runnable {
     private BufferedReader inDataPlayer;
     private ObjectOutputStream objOut;
     private String username = "";
+    private HashSet<Point> drawing = new HashSet<>();
 
     public PlayerHandler(Server server, Socket socket){
         this.server = server;
@@ -37,6 +40,16 @@ public class PlayerHandler implements Runnable {
         }catch (IOException e){
             System.out.println(e.getMessage());
         }
+    }
+
+    private synchronized void getDrawing(){
+            try {
+                objOut = new ObjectOutputStream(socket.getOutputStream());
+                objOut.writeObject(server.getDrawing());
+                objOut.flush();
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
     }
 
     @Override
@@ -68,7 +81,12 @@ public class PlayerHandler implements Runnable {
                         }
                         break;
                     case "draw" :
+                        String[] xy = command[1].split(", ");
+                        server.addPoint(new Point(Integer.parseInt(xy[0]), Integer.parseInt(xy[1])));
                         server.broadCastMessage("draw:", command[1]);
+                        break;
+                    case "getdrawing" :
+                        getDrawing();
                         break;
                     default :
                         break;

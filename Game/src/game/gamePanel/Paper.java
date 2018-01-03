@@ -37,6 +37,10 @@ public class Paper extends JPanel {
         });
     }
 
+    public void setDrawing(HashSet<Point> points){
+        this.points = points;
+    }
+
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.setColor(Color.black);

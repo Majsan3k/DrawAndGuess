@@ -16,6 +16,7 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.rmi.server.ExportException;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class ServerReader implements Runnable{
 
@@ -74,6 +75,17 @@ public class ServerReader implements Runnable{
             System.out.println(e.getClass() + ": " + e.getMessage());
         }
         return scores;
+    }
+
+    public synchronized HashSet<Point> getDrawing(){
+        HashSet<Point> drawing = null;
+        try{
+            objIn = new ObjectInputStream(socket.getInputStream());
+            drawing = (HashSet<Point>) objIn.readObject();
+        }catch (Exception e){
+            System.out.println(e.getClass() + ": " + e.getMessage());
+        }
+        return drawing;
     }
 
     private void showMessage(String username, String message){

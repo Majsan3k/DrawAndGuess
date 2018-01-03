@@ -3,11 +3,13 @@ package game;
 import game.database.DatabaseConnection;
 import game.database.Score;
 
+import java.awt.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -21,6 +23,7 @@ public class Server implements Runnable {
     private Socket painter;
     private String painterName;
     private DatabaseConnection dbCon;
+    private HashSet<Point> drawing = new HashSet<>();
 
     public Server(int port){
         dbCon = new DatabaseConnection();
@@ -38,6 +41,13 @@ public class Server implements Runnable {
         writeToOneSocket(socket, "signup:" + signUpStatus);
     }
 
+    public HashSet<Point> getDrawing(){
+        return drawing;
+    }
+
+    public void addPoint(Point p){
+        drawing.add(p);
+    }
 
     /**
      * Check if the player already is logged in. If no there's no existing painter, the new player become the painter.
@@ -45,7 +55,7 @@ public class Server implements Runnable {
      * @param username the players username
      * @param socket the socket that the player is connected to
      */
-    public void login(String username, String password, Socket socket){
+    public synchronized void login(String username, String password, Socket socket){
 
         String loginStatus = "";
         String painterStatus = "false";
@@ -112,7 +122,6 @@ public class Server implements Runnable {
      * @param socket the painter socket
      */
     public void askSecretWord(Socket socket){
-        System.out.println("Vill ha ord " + players.get(socket));
         writeToOneSocket(socket, "secretword:Congratulations, you are the new painter! Please write your secret word or sentence.:SERVER");
     }
 
@@ -132,6 +141,7 @@ public class Server implements Runnable {
     }
 
     public synchronized void winnerMessage(String username){
+        drawing.clear();
         broadCastMessage("winner:", username + " is the winner and the new painter!:Server");
         dbCon.updateScore(painterName);
         dbCon.updateScore(username);
@@ -153,9 +163,9 @@ public class Server implements Runnable {
         broadCastMessage("message:", username + " logged out:SERVER");
 
         if(painter == players.get(username)){
+            players.remove(username);
             painter = null;
             if(players.size() > 1) {
-                players.remove(username);
                 String newPainter = (String)players.keySet().toArray()[0];
                 setPainter(players.get(newPainter), newPainter);
                 System.out.println((String)players.keySet().toArray()[0]);
