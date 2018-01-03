@@ -14,26 +14,27 @@
     <favorites_list name="CodeIris Favorites" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.75121063">
+    <splitter split-orientation="horizontal" split-proportion="0.48486683">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/game/Server.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+                <state relative-caret-position="315">
+                  <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
                   <folding>
-                    <element signature="method#Server#0;class#Server#0" expanded="false" />
+                    <element signature="method#signUp#0;class#Server#0" expanded="false" />
                     <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
                     <element signature="method#login#0;class#Server#0" expanded="false" />
                     <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
                     <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-                    <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-                    <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+                    <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+                    <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
                     <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+                    <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
                     <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+                    <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
                     <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-                    <element signature="method#removeClient#0;class#Server#0" expanded="false" />
                     <element signature="method#run#0;class#Server#0" expanded="false" />
                     <element signature="method#main#0;class#Server#0" expanded="false" />
                   </folding>
@@ -41,59 +42,18 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DatabaseConnection.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/game/database/DatabaseConnection.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="378">
-                  <caret line="116" column="31" lean-forward="true" selection-start-line="116" selection-start-column="31" selection-end-line="116" selection-end-column="31" />
-                  <folding>
-                    <element signature="method#connectToDb#0;class#DatabaseConnection#0" expanded="false" />
-                    <element signature="method#close#0;class#DatabaseConnection#0" expanded="false" />
-                    <element signature="method#login#0;class#DatabaseConnection#0" expanded="false" />
-                    <marker date="1513673073272" expanded="true" signature="416:469" ph="INSERT INTO player... " />
-                    <marker date="1513673073272" expanded="true" signature="524:575" ph="INSERT INTO highscore... " />
-                    <marker date="1513673073272" expanded="true" signature="627:740" ph="SELECT score... player" />
-                    <marker date="1513673073272" expanded="true" signature="790:840" ph="SELECT passw... player" />
-                    <marker date="1513673073272" expanded="true" signature="895:1013" ph="UPDATE highscore... " />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DatabaseConnectionTest.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/game/DatabaseConnectionTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-                  <folding>
-                    <element signature="e#339#340#0" expanded="true" />
-                    <element signature="e#418#419#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Score.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/game/database/Score.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+        <leaf>
           <file leaf-file-name="PlayerHandler.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/game/PlayerHandler.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="21">
-                  <caret line="34" column="38" lean-forward="false" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+                <state relative-caret-position="812">
+                  <caret line="70" column="40" lean-forward="true" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
                   <folding>
-                    <element signature="imports" expanded="true" />
+                    <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+                    <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -125,6 +85,22 @@
       <find>setpai</find>
       <find>//</find>
       <find>somethin</find>
+      <find>objectout</find>
+      <find>object</find>
+      <find>serversocket</find>
+      <find>wrong u</find>
+      <find>none</find>
+      <find>write</find>
+      <find>login</find>
+      <find>welcome</find>
+      <find>choo</find>
+      <find>system.o</find>
+      <find>winner</find>
+      <find>welc</find>
+      <find>logged</find>
+      <find>congra</find>
+      <find>painter</find>
+      <find>secretword</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -145,11 +121,11 @@
         <option value="$PROJECT_DIR$/src/game/database/database/Score.java" />
         <option value="$PROJECT_DIR$/tests/game/database/DatabaseConnectionTest.java" />
         <option value="$PROJECT_DIR$/src/game/database/Score.java" />
+        <option value="$PROJECT_DIR$/tests/game/ServerTest.java" />
+        <option value="$PROJECT_DIR$/tests/game/DatabaseConnectionTest.java" />
+        <option value="$PROJECT_DIR$/src/game/database/DatabaseConnection.java" />
         <option value="$PROJECT_DIR$/src/game/PlayerHandler.java" />
         <option value="$PROJECT_DIR$/src/game/Server.java" />
-        <option value="$PROJECT_DIR$/tests/game/ServerTest.java" />
-        <option value="$PROJECT_DIR$/src/game/database/DatabaseConnection.java" />
-        <option value="$PROJECT_DIR$/tests/game/DatabaseConnectionTest.java" />
       </list>
     </option>
   </component>
@@ -159,11 +135,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="662" />
+    <option name="y" value="62" />
+    <option name="width" value="1487" />
+    <option name="height" value="969" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -180,9 +156,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -208,22 +185,10 @@
               <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="GameServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GameServer" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GameServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GameServer" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -265,7 +230,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DatabaseConnectionTest.testCreateUser">
+  <component name="RunManager" selected="Application.Server (1)">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -438,8 +403,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.DatabaseConnectionTest.testCreateUser" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Server (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Server (1)" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.DatabaseConnectionTest.testCreateUser" />
         <item index="2" class="java.lang.String" itemvalue="Application.Server" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.DatabaseConnectionTest" />
       </list>
@@ -464,14 +429,18 @@
       <workItem from="1512568690532" duration="9886000" />
       <workItem from="1512932397347" duration="26000" />
       <workItem from="1513669745446" duration="101000" />
-      <workItem from="1513669998344" duration="3391000" />
+      <workItem from="1513669998344" duration="4473000" />
+      <workItem from="1513783673565" duration="712000" />
+      <workItem from="1513840091479" duration="594000" />
+      <workItem from="1514196525711" duration="26000" />
+      <workItem from="1514539588212" duration="3188000" />
+      <workItem from="1514631623518" duration="606000" />
+      <workItem from="1514906587862" duration="3806000" />
+      <workItem from="1514965186321" duration="16181000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DatabaseConnectionTest - 2017.12.05 at 13h 24m 28s.xml">
-      <configuration name="DatabaseConnectionTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DatabaseConnectionTest_testCreateUser - 2017.12.19 at 09h 27m 56s.xml">
       <configuration name="DatabaseConnectionTest.testCreateUser" configurationId="JUnit" />
     </history-entry>
@@ -499,16 +468,28 @@
     <history-entry file="DatabaseConnectionTest_testCreateUser - 2017.12.19 at 09h 46m 23s.xml">
       <configuration name="DatabaseConnectionTest.testCreateUser" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DatabaseConnectionTest_testCreateUser - 2018.01.02 at 16h 26m 30s.xml">
+      <configuration name="DatabaseConnectionTest.testCreateUser" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33004000" />
+    <option name="totallyTimeSpent" value="59199000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32821077" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -516,7 +497,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37800252" sideWeight="0.50235295" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30625686" sideWeight="0.49764705" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33369923" sideWeight="0.49764705" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -548,7 +529,21 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/game/Server.java</url>
+          <line>155</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/game/PlayerHandler.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -558,7 +553,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -568,17 +564,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#signUp#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
             <element signature="method#login#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
             <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+            <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
             <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-            <element signature="method#removeClient#0;class#Server#0" expanded="false" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#main#0;class#Server#0" expanded="false" />
           </folding>
@@ -597,16 +594,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
-          <folding>
-            <element signature="method#connectToDb#0;class#DatabaseConnection#0" expanded="false" />
-            <element signature="method#close#0;class#DatabaseConnection#0" expanded="false" />
-            <element signature="method#login#0;class#DatabaseConnection#0" expanded="false" />
-            <marker date="1513673073272" expanded="true" signature="416:469" ph="INSERT INTO player... " />
-            <marker date="1513673073272" expanded="true" signature="524:575" ph="INSERT INTO highscore... " />
-            <marker date="1513673073272" expanded="true" signature="627:740" ph="SELECT score... player" />
-            <marker date="1513673073272" expanded="true" signature="790:840" ph="SELECT passw... player" />
-            <marker date="1513673073272" expanded="true" signature="895:1013" ph="UPDATE highscore... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -615,7 +603,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -625,17 +614,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#signUp#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
             <element signature="method#login#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
             <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+            <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
             <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-            <element signature="method#removeClient#0;class#Server#0" expanded="false" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#main#0;class#Server#0" expanded="false" />
           </folding>
@@ -654,16 +644,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
-          <folding>
-            <element signature="method#connectToDb#0;class#DatabaseConnection#0" expanded="false" />
-            <element signature="method#close#0;class#DatabaseConnection#0" expanded="false" />
-            <element signature="method#login#0;class#DatabaseConnection#0" expanded="false" />
-            <marker date="1513673073272" expanded="true" signature="416:469" ph="INSERT INTO player... " />
-            <marker date="1513673073272" expanded="true" signature="524:575" ph="INSERT INTO highscore... " />
-            <marker date="1513673073272" expanded="true" signature="627:740" ph="SELECT score... player" />
-            <marker date="1513673073272" expanded="true" signature="790:840" ph="SELECT passw... player" />
-            <marker date="1513673073272" expanded="true" signature="895:1013" ph="UPDATE highscore... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -672,7 +653,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -682,17 +664,18 @@
         <state relative-caret-position="84">
           <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#signUp#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
             <element signature="method#login#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
             <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+            <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
             <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-            <element signature="method#removeClient#0;class#Server#0" expanded="false" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#main#0;class#Server#0" expanded="false" />
           </folding>
@@ -703,9 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -713,16 +693,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="10" column="84" lean-forward="false" selection-start-line="10" selection-start-column="84" selection-end-line="10" selection-end-column="84" />
-          <folding>
-            <element signature="method#connectToDb#0;class#DatabaseConnection#0" expanded="false" />
-            <element signature="method#close#0;class#DatabaseConnection#0" expanded="false" />
-            <element signature="method#login#0;class#DatabaseConnection#0" expanded="false" />
-            <marker date="1513673073272" expanded="true" signature="416:469" ph="INSERT INTO player... " />
-            <marker date="1513673073272" expanded="true" signature="524:575" ph="INSERT INTO highscore... " />
-            <marker date="1513673073272" expanded="true" signature="627:740" ph="SELECT score... player" />
-            <marker date="1513673073272" expanded="true" signature="790:840" ph="SELECT passw... player" />
-            <marker date="1513673073272" expanded="true" signature="895:1013" ph="UPDATE highscore... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -731,7 +702,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -741,17 +713,18 @@
         <state relative-caret-position="168">
           <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#signUp#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
             <element signature="method#login#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
             <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+            <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
             <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-            <element signature="method#removeClient#0;class#Server#0" expanded="false" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#main#0;class#Server#0" expanded="false" />
           </folding>
@@ -762,16 +735,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="method#connectToDb#0;class#DatabaseConnection#0" expanded="false" />
-            <element signature="method#close#0;class#DatabaseConnection#0" expanded="false" />
-            <element signature="method#login#0;class#DatabaseConnection#0" expanded="false" />
-            <marker date="1513673073272" expanded="true" signature="416:469" ph="INSERT INTO player... " />
-            <marker date="1513673073272" expanded="true" signature="524:575" ph="INSERT INTO highscore... " />
-            <marker date="1513673073272" expanded="true" signature="627:740" ph="SELECT score... player" />
-            <marker date="1513673073272" expanded="true" signature="790:840" ph="SELECT passw... player" />
-            <marker date="1513673073272" expanded="true" signature="895:1013" ph="UPDATE highscore... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -788,7 +752,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -798,17 +763,18 @@
         <state relative-caret-position="2667">
           <caret line="127" column="27" lean-forward="true" selection-start-line="127" selection-start-column="27" selection-end-line="127" selection-end-column="27" />
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#signUp#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
             <element signature="method#login#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
             <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+            <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
             <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-            <element signature="method#removeClient#0;class#Server#0" expanded="false" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#main#0;class#Server#0" expanded="false" />
           </folding>
@@ -819,16 +785,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2709">
           <caret line="129" column="52" lean-forward="true" selection-start-line="129" selection-start-column="52" selection-end-line="129" selection-end-column="52" />
-          <folding>
-            <element signature="method#connectToDb#0;class#DatabaseConnection#0" expanded="false" />
-            <element signature="method#close#0;class#DatabaseConnection#0" expanded="false" />
-            <element signature="method#login#0;class#DatabaseConnection#0" expanded="false" />
-            <marker date="1513673073272" expanded="true" signature="416:469" ph="INSERT INTO player... " />
-            <marker date="1513673073272" expanded="true" signature="524:575" ph="INSERT INTO highscore... " />
-            <marker date="1513673073272" expanded="true" signature="627:740" ph="SELECT score... player" />
-            <marker date="1513673073272" expanded="true" signature="790:840" ph="SELECT passw... player" />
-            <marker date="1513673073272" expanded="true" signature="895:1013" ph="UPDATE highscore... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -845,7 +802,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -855,17 +813,18 @@
         <state relative-caret-position="441">
           <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#signUp#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
             <element signature="method#login#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
             <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+            <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
             <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-            <element signature="method#removeClient#0;class#Server#0" expanded="false" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#main#0;class#Server#0" expanded="false" />
           </folding>
@@ -877,7 +836,8 @@
         <state relative-caret-position="672">
           <caret line="35" column="58" lean-forward="false" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -887,17 +847,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#signUp#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
             <element signature="method#login#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
             <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+            <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
             <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-            <element signature="method#removeClient#0;class#Server#0" expanded="false" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#main#0;class#Server#0" expanded="false" />
           </folding>
@@ -909,7 +870,8 @@
         <state relative-caret-position="672">
           <caret line="35" column="58" lean-forward="false" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -919,17 +881,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#signUp#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
             <element signature="method#login#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
             <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+            <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
             <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-            <element signature="method#removeClient#0;class#Server#0" expanded="false" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#main#0;class#Server#0" expanded="false" />
           </folding>
@@ -941,7 +904,8 @@
         <state relative-caret-position="672">
           <caret line="35" column="58" lean-forward="false" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -951,17 +915,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#signUp#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
             <element signature="method#login#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
             <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+            <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
             <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-            <element signature="method#removeClient#0;class#Server#0" expanded="false" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#main#0;class#Server#0" expanded="false" />
           </folding>
@@ -973,7 +938,8 @@
         <state relative-caret-position="672">
           <caret line="35" column="58" lean-forward="false" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -983,17 +949,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#signUp#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
             <element signature="method#login#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
             <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+            <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
             <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-            <element signature="method#removeClient#0;class#Server#0" expanded="false" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#main#0;class#Server#0" expanded="false" />
           </folding>
@@ -1005,7 +972,8 @@
         <state relative-caret-position="735">
           <caret line="35" column="58" lean-forward="false" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1015,17 +983,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#signUp#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
             <element signature="method#login#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
             <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+            <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
             <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-            <element signature="method#removeClient#0;class#Server#0" expanded="false" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#main#0;class#Server#0" expanded="false" />
           </folding>
@@ -1037,7 +1006,8 @@
         <state relative-caret-position="735">
           <caret line="35" column="58" lean-forward="false" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1047,17 +1017,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#signUp#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
             <element signature="method#login#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
             <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+            <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
             <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-            <element signature="method#removeClient#0;class#Server#0" expanded="false" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#main#0;class#Server#0" expanded="false" />
           </folding>
@@ -1069,7 +1040,8 @@
         <state relative-caret-position="672">
           <caret line="35" column="58" lean-forward="false" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1079,17 +1051,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#signUp#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
             <element signature="method#login#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
             <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+            <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
             <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-            <element signature="method#removeClient#0;class#Server#0" expanded="false" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#main#0;class#Server#0" expanded="false" />
           </folding>
@@ -1101,7 +1074,8 @@
         <state relative-caret-position="672">
           <caret line="35" column="58" lean-forward="true" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1111,17 +1085,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#signUp#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
             <element signature="method#login#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
             <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+            <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
             <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-            <element signature="method#removeClient#0;class#Server#0" expanded="false" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#main#0;class#Server#0" expanded="false" />
           </folding>
@@ -1133,7 +1108,8 @@
         <state relative-caret-position="588">
           <caret line="31" column="33" lean-forward="false" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1143,17 +1119,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#signUp#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
             <element signature="method#login#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
             <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+            <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
             <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-            <element signature="method#removeClient#0;class#Server#0" expanded="false" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#main#0;class#Server#0" expanded="false" />
           </folding>
@@ -1165,7 +1142,8 @@
         <state relative-caret-position="588">
           <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1175,17 +1153,18 @@
         <state relative-caret-position="798">
           <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#signUp#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
             <element signature="method#login#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
             <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+            <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
             <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-            <element signature="method#removeClient#0;class#Server#0" expanded="false" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#main#0;class#Server#0" expanded="false" />
           </folding>
@@ -1197,7 +1176,8 @@
         <state relative-caret-position="21">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1210,78 +1190,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/database/Score.java">
+    <entry file="file://$PROJECT_DIR$/tests/game/ServerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="168">
+          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/database/DatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="125" column="44" lean-forward="true" selection-start-line="125" selection-start-column="44" selection-end-line="125" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/PlayerHandler.java">
+    <entry file="file://$PROJECT_DIR$/tests/game/DatabaseConnectionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="34" column="38" lean-forward="false" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+        <state relative-caret-position="370">
+          <caret line="34" column="12" lean-forward="false" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#339#340#0" expanded="false" />
+            <element signature="e#418#419#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/database/Score.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="53" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        <state relative-caret-position="315">
+          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
           <folding>
-            <element signature="method#Server#0;class#Server#0" expanded="false" />
+            <element signature="method#signUp#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#login#0;class#Server#0" expanded="false" />
             <element signature="method#login#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setPainter#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="method#setSecretWord#0;class#Server#0" expanded="false" />
-            <element signature="docComment;method#getSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="docComment;method#checkSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#checkSecretWord#0;class#Server#0" expanded="false" />
             <element signature="docComment;method#askSecretWord#0;class#Server#0" expanded="false" />
+            <element signature="method#askSecretWord#0;class#Server#0" expanded="false" />
             <element signature="method#broadCastMessage#0;class#Server#0" expanded="false" />
+            <element signature="method#winnerMessage#0;class#Server#0" expanded="false" />
             <element signature="method#writeToOneSocket#0;class#Server#0" expanded="false" />
-            <element signature="method#removeClient#0;class#Server#0" expanded="false" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#main#0;class#Server#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/game/ServerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/game/PlayerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/database/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="116" column="31" lean-forward="true" selection-start-line="116" selection-start-column="31" selection-end-line="116" selection-end-column="31" />
+        <state relative-caret-position="812">
+          <caret line="70" column="40" lean-forward="true" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
           <folding>
-            <element signature="method#connectToDb#0;class#DatabaseConnection#0" expanded="false" />
-            <element signature="method#close#0;class#DatabaseConnection#0" expanded="false" />
-            <element signature="method#login#0;class#DatabaseConnection#0" expanded="false" />
-            <marker date="1513673073272" expanded="true" signature="416:469" ph="INSERT INTO player... " />
-            <marker date="1513673073272" expanded="true" signature="524:575" ph="INSERT INTO highscore... " />
-            <marker date="1513673073272" expanded="true" signature="627:740" ph="SELECT score... player" />
-            <marker date="1513673073272" expanded="true" signature="790:840" ph="SELECT passw... player" />
-            <marker date="1513673073272" expanded="true" signature="895:1013" ph="UPDATE highscore... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/game/DatabaseConnectionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-          <folding>
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
+            <element signature="method#PlayerHandler#0;class#PlayerHandler#0" expanded="false" />
+            <element signature="method#getHighscore#0;class#PlayerHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>

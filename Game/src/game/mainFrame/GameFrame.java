@@ -13,6 +13,7 @@ import java.awt.*;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class GameFrame extends JFrame{
 
@@ -51,7 +52,7 @@ public class GameFrame extends JFrame{
         loginMode();
 
         //TODO: Ta bort, bara för testning
-//        loginRequest("maja", "aa");
+        loginRequest("Robert", "aabbcc");
 
         pack();
         setVisible(true);
@@ -89,6 +90,7 @@ public class GameFrame extends JFrame{
     public synchronized void updateScore(){
         serverPrint.writeToServer("getHighScore");
         ArrayList<Score> scores = serverReader.getHighScore();
+        Collections.sort(scores);
         highScorePanel.fillHighscoreField(scores);
     }
 

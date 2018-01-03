@@ -2,7 +2,7 @@ package game.database;
 
 import java.io.Serializable;
 
-public class Score implements Serializable {
+public class Score implements Serializable, Comparable {
 
     private static final long serialVersionUID = 42L;
     private int score;
@@ -19,6 +19,11 @@ public class Score implements Serializable {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public int compareTo(Object other){
+        return ((Score)other).getScore() - score;
     }
 
     public String toString(){

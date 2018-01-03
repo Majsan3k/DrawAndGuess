@@ -46,33 +46,32 @@ public class PlayerHandler implements Runnable {
             while((inData = inDataPlayer.readLine()) != null) {
                 String[] command = inData.split(":");
 
-                if(command[0].equalsIgnoreCase("signUp")){
-                    server.signUp(command[1], command[2], socket);
-                }
-
-                if (command[0].equals("login")) {
-                    this.username = command[1];
-                    String password = command[2];
-                    server.login(username, password, socket);
-                }
-
-                if(command[0].equalsIgnoreCase("getHighScore")){
-                    getHighscore();
-                }
-
-                if (command[0].equals("message")) {
-                    if(command[1].contains("secretword")){
-                        String[] secretWord = command[1].split(" ");
-                        server.setSecretWord(secretWord[1], socket);
-                    }else {
+                switch(command[0]){
+                    case "signUp" :
+                        server.signUp(command[1], command[2], socket);
+                        break;
+                    case "login" :
+                        this.username = command[1];
+                        String password = command[2];
+                        server.login(username, password, socket);
+                        break;
+                    case "getHighScore" :
+                        getHighscore();
+                        break;
+                    case "secretword" :
+                        server.setSecretWord(command[1], socket);
+                        break;
+                    case "message" :
                         server.broadCastMessage("message:", command[1] + ":" + username);
-                        if(command[1].equalsIgnoreCase(server.getSecretWord())){
+                        if(server.checkSecretWord(command[1], socket)){
                             server.winnerMessage(username);
                         }
-                    }
-                }
-                if(command[0].equals("draw")){
-                    server.broadCastMessage("draw:", command[1]);
+                        break;
+                    case "draw" :
+                        server.broadCastMessage("draw:", command[1]);
+                        break;
+                    default :
+                        break;
                 }
             }
             inDataPlayer.close();

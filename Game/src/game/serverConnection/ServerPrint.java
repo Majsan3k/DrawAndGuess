@@ -15,5 +15,4 @@ public class ServerPrint {
     public void writeToServer(String message){
         pw.println(message);
     }
-
 }

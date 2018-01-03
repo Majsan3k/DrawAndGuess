@@ -4,7 +4,6 @@ import game.database.DatabaseConnection;
 import game.database.Score;
 
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -20,6 +19,7 @@ public class Server implements Runnable {
     private PrintWriter pw;
     private String secretWord;
     private Socket painter;
+    private String painterName;
     private DatabaseConnection dbCon;
 
     public Server(int port){
@@ -61,9 +61,9 @@ public class Server implements Runnable {
                 painterStatus = "true";
             }
         }
-        writeToOneSocket(socket, "login:" + loginStatus + ":" + painterStatus + ":" + "Welcome! You are the new painter! Please write your secret word. First write \"secretword\" and then your word");
+        writeToOneSocket(socket, "login:" + loginStatus + ":" + painterStatus + ":" + "Welcome! You are the new painter! Please write your secret word or sentence.:Server");
         if(loginStatus.equals("OK")) {
-            broadCastMessage("message:", username + " logged in:none");
+            broadCastMessage("message:", username + " logged in:server");
             players.put(username, socket);
         }
     }
@@ -72,7 +72,8 @@ public class Server implements Runnable {
      * Decide if the player should be painter. Write to specific socket and tell if it should be a painter or not
      * @param socket
      */
-    public void setPainter(Socket socket){
+    public void setPainter(Socket socket, String username){
+        painterName = username;
         if(painter != null){
             writeToOneSocket(painter, "painter:false");
         }
@@ -90,16 +91,20 @@ public class Server implements Runnable {
      * @param socket the painter
      */
     public void setSecretWord(String secretWord, Socket socket){
-        this.secretWord = secretWord;
-        writeToOneSocket(socket, "message:The secret word \"" + secretWord + "\" has been choosed, start to draw!:Server");
+        if(socket == painter) {
+            this.secretWord = secretWord;
+            writeToOneSocket(socket, "message:The secret word \"" + secretWord + "\" has been chosen, start to draw!:Server");
+        }else{
+            writeToOneSocket(socket, "message:You can't decide the secret word since you're not the drawer!:Server");
+        }
     }
 
     /**
      * Get the secret word
      * @return
      */
-    public String getSecretWord(){
-        return secretWord;
+    public boolean checkSecretWord(String guess, Socket socket){
+        return guess.equalsIgnoreCase(secretWord) && painter != socket;
     }
 
     /**
@@ -107,7 +112,8 @@ public class Server implements Runnable {
      * @param socket the painter socket
      */
     public void askSecretWord(Socket socket){
-        writeToOneSocket(socket, "message:Congratulations, you are the new painter! Please write your secret word. First write \"secretword\" and then your word:Server");
+        System.out.println("Vill ha ord " + players.get(socket));
+        writeToOneSocket(socket, "secretword:Congratulations, you are the new painter! Please write your secret word or sentence.:SERVER");
     }
 
     public synchronized ArrayList<Score> getHighScore(){
@@ -115,7 +121,6 @@ public class Server implements Runnable {
     }
 
     public synchronized void broadCastMessage(String command, String inData){
-        System.out.println(command + " " + inData);
         for (Map.Entry<String, Socket> s : players.entrySet()) {
             try {
                 pw = new PrintWriter(s.getValue().getOutputStream(), true);
@@ -128,10 +133,11 @@ public class Server implements Runnable {
 
     public synchronized void winnerMessage(String username){
         broadCastMessage("winner:", username + " is the winner and the new painter!:Server");
-        setPainter(players.get(username));
+        dbCon.updateScore(painterName);
         dbCon.updateScore(username);
+        setPainter(players.get(username), username);
         secretWord = null;
-        broadCastMessage("highscore:", "none");
+        broadCastMessage("highscore:", "SERVER");
     }
 
     private synchronized void writeToOneSocket(Socket socket, String message){
@@ -144,11 +150,19 @@ public class Server implements Runnable {
     }
 
     public synchronized void removeClient(String username){
+        broadCastMessage("message:", username + " logged out:SERVER");
+
         if(painter == players.get(username)){
             painter = null;
+            if(players.size() > 1) {
+                players.remove(username);
+                String newPainter = (String)players.keySet().toArray()[0];
+                setPainter(players.get(newPainter), newPainter);
+                System.out.println((String)players.keySet().toArray()[0]);
+            }
+        }else {
+            players.remove(username);
         }
-        players.remove(username);
-        broadCastMessage("message:", username + " logged out:none");
     }
 
     @Override

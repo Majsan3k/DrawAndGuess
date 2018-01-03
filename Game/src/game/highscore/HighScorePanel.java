@@ -11,24 +11,33 @@ public class HighScorePanel extends JPanel{
     private JTextArea highscoreField;
 
     public HighScorePanel(){
-        setPreferredSize(new Dimension(100, 0));
+        setPreferredSize(new Dimension(140, 0));
+        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         setBackground(Color.WHITE);
         setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        JLabel heading = new JLabel("Top Ten");
-        heading.setFont(new Font("Arial", Font.PLAIN, 15));
-        add(heading);
+        JLabel heading = new JLabel("<html><u>Top Ten</u></html>");
+        heading.setFont(new Font("Arial", Font.PLAIN, 25));
 
         highscoreField = new JTextArea();
         highscoreField.setEditable(false);
+        highscoreField.setFont(new Font("Arial", Font.PLAIN, 12));
         JScrollPane scroll = new JScrollPane(highscoreField);
+        scroll.setBorder(null);
+
+        add(heading);
+        add(Box.createVerticalStrut(30));
         add(scroll);
     }
 
     public void fillHighscoreField(ArrayList<Score> scores){
         highscoreField.setText("");
-        for(int i = 1; i < scores.size()+1; i++){
-            Score s = scores.get(i-1);
-            highscoreField.append(i + ". " + s.getName() + ": " + s.getScore() + "\n");
+        for(int i = 1; i < 11; i++){
+            if(i <= scores.size()) {
+                Score s = scores.get(i - 1);
+                highscoreField.append(i + ". " + s.getName() + ": " + s.getScore() + "\n\n");
+            }else{
+                highscoreField.append(i + ".");
+            }
         }
     }
 }

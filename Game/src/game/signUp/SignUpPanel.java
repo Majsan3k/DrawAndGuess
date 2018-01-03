@@ -4,6 +4,8 @@ import game.mainFrame.GameFrame;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class SignUpPanel extends JPanel {
 
@@ -11,6 +13,7 @@ public class SignUpPanel extends JPanel {
     private JTextField username;
     private JTextField password;
     private JButton signUpBtn;
+    private JLabel back;
     private JLabel errorMessage;
     private JLabel invalidInfo;
 
@@ -28,8 +31,21 @@ public class SignUpPanel extends JPanel {
                 return;
             }
             gameFrame.signUpRequest(username.getText(), password.getText());
-
         });
+
+        back.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                clearFields();
+                gameFrame.loginMode();
+            }
+        });
+    }
+
+    public void clearFields(){
+        username.setText("");
+        password.setText("");
+        errorMessage.setText("");
     }
 
     public void setErrorMessage(String message){
@@ -44,6 +60,7 @@ public class SignUpPanel extends JPanel {
         password.setPreferredSize(TEXT_FIELD_SIZE);
 
         signUpBtn = new JButton("Sign up");
+        back = new JLabel("Back");
 
         errorMessage = new JLabel("", JLabel.CENTER);
         errorMessage.setPreferredSize(new Dimension(300,20));
@@ -82,6 +99,9 @@ public class SignUpPanel extends JPanel {
 
         constraints.gridy++;
         add(errorMessage, constraints);
+
+        constraints.gridy += 10;
+        add(back, constraints);
     }
 
 }

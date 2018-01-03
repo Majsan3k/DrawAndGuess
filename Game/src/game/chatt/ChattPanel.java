@@ -13,6 +13,7 @@ public class ChattPanel extends JPanel{
     private JTextField writeMessage;
     private JTextArea messageView;
     private GameFrame gameFrame;
+    private boolean secretWordMessage;
 
     public ChattPanel(GameFrame gameFrame, ServerPrint serverPrint){
 
@@ -31,7 +32,12 @@ public class ChattPanel extends JPanel{
             @Override
             public void keyReleased(KeyEvent e) {
                 if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-                    serverPrint.writeToServer("message:" + writeMessage.getText());
+                    if(secretWordMessage){
+                        secretWordMessage = false;
+                        serverPrint.writeToServer("secretword:" + writeMessage.getText());
+                    }else {
+                        serverPrint.writeToServer("message:" + writeMessage.getText());
+                    }
                     writeMessage.setText("");
                 }
             }
@@ -40,11 +46,17 @@ public class ChattPanel extends JPanel{
         add((writeMessage), BorderLayout.NORTH);
         messageView = new JTextArea();
         messageView.setEditable(false);
+        messageView.setLineWrap(true);
+        messageView.setWrapStyleWord(true);
         JScrollPane scroll = new JScrollPane(messageView);
         add(scroll);
     }
 
+    public void setSecretWordMessage(boolean secretword){
+        secretWordMessage = secretword;
+    }
+
     public void displayMessage(String message){
-        messageView.append(message + "\n");
+        messageView.append(message + "\n\n");
     }
 }

@@ -45,13 +45,14 @@ public class ServerReader implements Runnable{
 
     private void signUp(String signupStatus){
         if(signupStatus.equalsIgnoreCase("OK")){
+            signUpPanel.clearFields();
             gameFrame.loginMode();
         }else{
             signUpPanel.setErrorMessage(signupStatus);
         }
     }
 
-    private void login(String logInStatus, String painterStatus, String message){
+    private void login(String logInStatus, String painterStatus, String message, String serverName){
         if(logInStatus.equalsIgnoreCase("OK")){
             gameFrame.login();
         }else{
@@ -59,7 +60,8 @@ public class ServerReader implements Runnable{
         }
         if (painterStatus.equalsIgnoreCase("true")) {
             paper.setPainter(true);
-            chattWindow.displayMessage(message);
+            chattWindow.setSecretWordMessage(true);
+            chattWindow.displayMessage(serverName.toUpperCase() + ": " + message);
         }
     }
 
@@ -75,16 +77,13 @@ public class ServerReader implements Runnable{
     }
 
     private void showMessage(String username, String message){
-        if(!username.equalsIgnoreCase("none")) {
-            chattWindow.displayMessage(username + ": " + message);
-        }else{
-            chattWindow.displayMessage(message);
-        }
+        chattWindow.displayMessage(username.toUpperCase() + ": " + message);
     }
 
-    private void showWinnerMessage(String message){
+    private void showWinnerMessage(String name, String message){
+        chattWindow.setSecretWordMessage(true);
         paper.clearPaper();
-        chattWindow.displayMessage(message);
+        showMessage(name, message);
     }
 
     @Override
@@ -95,54 +94,35 @@ public class ServerReader implements Runnable{
                 System.out.println(message);
 
                 String[] command = message.split(":");
-                if(command.length > 1) {
-                    String cmd = command[0];
-                    String val = command[1];
 
-                    if(cmd.equalsIgnoreCase("signup")){
-                        signUp(val);
-                    }
-
-                    /* Log in values */
-                    if (cmd.equalsIgnoreCase("login")) {
-                        login(val, command[2], command[3]);
-                    }
-
-                    /* Message */
-                    if (cmd.equalsIgnoreCase("message")) {
-                        showMessage(command[2], val);
-                    }
-
-                    /* Winner message */
-                    if(cmd.equalsIgnoreCase("winner")){
-                        showWinnerMessage(val);
-                    }
-
-                    /* Highscore has been updated */
-                    if(cmd.equalsIgnoreCase("highscore")){
+                switch (command[0]){
+                    case "signup" :
+                        signUp(command[1]);
+                        break;
+                    case "login" :
+                        login(command[1], command[2], command[3], command[4]);
+                        break;
+                    case "message" :
+                        showMessage(command[2], command[1]);
+                        break;
+                    case "winner" :
+                        showWinnerMessage(command[2], command[1]);
+                        break;
+                    case "highscore" :
                         gameFrame.updateScore();
-                    }
-
-                    /* Draw information */
-                    if(cmd.equalsIgnoreCase("draw")){
-                        String[] xy = val.split(", ");
+                        break;
+                    case "draw" :
+                        String[] xy = command[1].split(", ");
                         Point receivedPoint = new Point(Integer.parseInt(xy[0]), Integer.parseInt(xy[1]));
                         paper.addPoint(receivedPoint);
-                    }
-
-                    /* Server asks for a secret word */
-                    if(cmd.equals("secretWord")){
-                        chattWindow.displayMessage(val);
-                    }
-
-                    /* Server tells if painter or not */
-                    if(cmd.equals("painter")){
-                        if(command[1].equals("true")){
-                            paper.setPainter(true);
-                        }else{
-                            paper.setPainter(false);
-                        }
-                    }
+                        break;
+                    case "secretword" :
+                        showMessage(command[2], command[1]);
+                        chattWindow.setSecretWordMessage(true);
+                        break;
+                    case "painter" :
+                        paper.setPainter(command[1].equals("true"));
+                        chattWindow.setSecretWordMessage(command[1].equals("true"));
                 }
             }
         }catch(SocketException s){
