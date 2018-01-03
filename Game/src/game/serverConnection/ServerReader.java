@@ -93,7 +93,7 @@ public class ServerReader implements Runnable{
     }
 
     private void showWinnerMessage(String name, String message){
-        chattWindow.setSecretWordMessage(true);
+//        chattWindow.setSecretWordMessage(true);
         paper.clearPaper();
         showMessage(name, message);
     }
@@ -103,7 +103,7 @@ public class ServerReader implements Runnable{
         String message;
         try {
             while((message = serverIn.readLine()) != null){
-                System.out.println(message);
+//                System.out.println(message);
 
                 String[] command = message.split(":");
 
@@ -134,7 +134,6 @@ public class ServerReader implements Runnable{
                         break;
                     case "painter" :
                         paper.setPainter(command[1].equals("true"));
-                        chattWindow.setSecretWordMessage(command[1].equals("true"));
                 }
             }
         }catch(SocketException s){

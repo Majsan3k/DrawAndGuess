@@ -7,14 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a256f28e-5755-44e5-884d-0a95c7607d1b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/game/gamePanel/Paper.java" afterPath="$PROJECT_DIR$/src/game/gamePanel/Paper.java" />
-      <change beforePath="$PROJECT_DIR$/src/game/mainFrame/GameFrame.java" afterPath="$PROJECT_DIR$/src/game/mainFrame/GameFrame.java" />
+      <change beforePath="$PROJECT_DIR$/src/game/chatt/ChattPanel.java" afterPath="$PROJECT_DIR$/src/game/chatt/ChattPanel.java" />
       <change beforePath="$PROJECT_DIR$/src/game/serverConnection/ServerReader.java" afterPath="$PROJECT_DIR$/src/game/serverConnection/ServerReader.java" />
       <change beforePath="$PROJECT_DIR$/../GameServer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../GameServer/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/out/production/GameServer/game/PlayerHandler.class" afterPath="$PROJECT_DIR$/../GameServer/out/production/GameServer/game/PlayerHandler.class" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/out/production/GameServer/game/Server.class" afterPath="$PROJECT_DIR$/../GameServer/out/production/GameServer/game/Server.class" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/src/game/PlayerHandler.java" afterPath="$PROJECT_DIR$/../GameServer/src/game/PlayerHandler.java" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/src/game/Server.java" afterPath="$PROJECT_DIR$/../GameServer/src/game/Server.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,13 +23,13 @@
     <favorites_list name="CodeIris Favorites" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.41385886">
+    <splitter split-orientation="horizontal" split-proportion="0.2637944">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file leaf-file-name="GameFrame.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/game/mainFrame/GameFrame.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="98">
+                <state relative-caret-position="394">
                   <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
                   <folding />
                 </state>
@@ -100,8 +95,8 @@
           <file leaf-file-name="ServerReader.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/game/serverConnection/ServerReader.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="243">
-                  <caret line="112" column="30" lean-forward="false" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="30" />
+                <state relative-caret-position="247">
+                  <caret line="132" column="42" lean-forward="true" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#ServerReader#0;class#ServerReader#0" expanded="false" />
@@ -155,15 +150,13 @@
           <file leaf-file-name="ChattPanel.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/game/chatt/ChattPanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="247">
-                  <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+                <state relative-caret-position="328">
+                  <caret line="54" column="20" lean-forward="true" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
                   <folding>
                     <element signature="e#907#1467#0" expanded="true" />
                     <element signature="e#1466#1467#0" expanded="true" />
-                    <element signature="e#1825#1826#0" expanded="true" />
-                    <element signature="e#1871#1872#0" expanded="true" />
-                    <element signature="e#1920#1921#0" expanded="true" />
-                    <element signature="e#1972#1973#0" expanded="true" />
+                    <element signature="e#1985#1986#0" expanded="true" />
+                    <element signature="e#2037#2038#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -282,10 +275,10 @@
         <option value="$PROJECT_DIR$/src/game/highscore/HighScorePanel.java" />
         <option value="$PROJECT_DIR$/src/game/database/Score.java" />
         <option value="$PROJECT_DIR$/src/game/signUp/SignUpPanel.java" />
-        <option value="$PROJECT_DIR$/src/game/chatt/ChattPanel.java" />
         <option value="$PROJECT_DIR$/src/game/gamePanel/Paper.java" />
-        <option value="$PROJECT_DIR$/src/game/serverConnection/ServerReader.java" />
         <option value="$PROJECT_DIR$/src/game/mainFrame/GameFrame.java" />
+        <option value="$PROJECT_DIR$/src/game/chatt/ChattPanel.java" />
+        <option value="$PROJECT_DIR$/src/game/serverConnection/ServerReader.java" />
       </list>
     </option>
   </component>
@@ -693,7 +686,7 @@
       <workItem from="1513840071839" duration="643000" />
       <workItem from="1514538781513" duration="4258000" />
       <workItem from="1514906577501" duration="5963000" />
-      <workItem from="1514965220766" duration="24130000" />
+      <workItem from="1514965220766" duration="25602000" />
     </task>
     <servers />
   </component>
@@ -730,7 +723,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71554000" />
+    <option name="totallyTimeSpent" value="73026000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -753,12 +746,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2360044" sideWeight="0.50208336" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32491767" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" x="0" y="365" width="1920" height="300" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32491767" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" x="0" y="365" width="1920" height="300" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1140625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3109375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3644347" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -787,15 +780,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/game/chatt/ChattPanel.java</url>
-          <line>35</line>
-          <properties />
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="45" />
+      <option name="time" value="46" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1011,21 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/chatt/ChattPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-          <folding>
-            <element signature="e#907#1467#0" expanded="true" />
-            <element signature="e#1466#1467#0" expanded="true" />
-            <element signature="e#1825#1826#0" expanded="true" />
-            <element signature="e#1871#1872#0" expanded="true" />
-            <element signature="e#1920#1921#0" expanded="true" />
-            <element signature="e#1972#1973#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/serverConnection/ServerPrint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -1048,6 +1018,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/mainFrame/GameFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/gamePanel/Paper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-307">
@@ -1061,18 +1039,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/mainFrame/GameFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/game/chatt/ChattPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="328">
+          <caret line="54" column="20" lean-forward="true" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+          <folding>
+            <element signature="e#907#1467#0" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1985#1986#0" expanded="true" />
+            <element signature="e#2037#2038#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/serverConnection/ServerReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="112" column="30" lean-forward="false" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="30" />
+        <state relative-caret-position="247">
+          <caret line="132" column="42" lean-forward="true" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ServerReader#0;class#ServerReader#0" expanded="false" />
