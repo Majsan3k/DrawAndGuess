@@ -53,9 +53,9 @@ public class ServerReader implements Runnable{
         }
     }
 
-    private void login(String logInStatus, String painterStatus, String message, String serverName){
+    private void login(String logInStatus, String painterStatus, String username, String message, String serverName){
         if(logInStatus.equalsIgnoreCase("OK")){
-            gameFrame.login();
+            gameFrame.login(username);
         }else{
             logInPanel.setErrorMessage(logInStatus);
         }
@@ -89,11 +89,13 @@ public class ServerReader implements Runnable{
     }
 
     private void showMessage(String username, String message){
+        if(message.trim().contains("logged out")){
+            paper.clearPaper();
+        }
         chattWindow.displayMessage(username.toUpperCase() + ": " + message);
     }
 
     private void showWinnerMessage(String name, String message){
-//        chattWindow.setSecretWordMessage(true);
         paper.clearPaper();
         showMessage(name, message);
     }
@@ -103,7 +105,7 @@ public class ServerReader implements Runnable{
         String message;
         try {
             while((message = serverIn.readLine()) != null){
-//                System.out.println(message);
+                System.out.println(message);
 
                 String[] command = message.split(":");
 
@@ -112,7 +114,7 @@ public class ServerReader implements Runnable{
                         signUp(command[1]);
                         break;
                     case "login" :
-                        login(command[1], command[2], command[3], command[4]);
+                        login(command[1], command[2], command[3], command[4], command[5]);
                         break;
                     case "message" :
                         showMessage(command[2], command[1]);

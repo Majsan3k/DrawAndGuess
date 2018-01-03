@@ -27,6 +27,7 @@ public class GameFrame extends JFrame{
     private Socket socket;
     private ServerPrint serverPrint;
     private ServerReader serverReader;
+    private String user;
 
     public GameFrame(Socket socket) throws IOException {
         this.socket = socket;
@@ -60,7 +61,7 @@ public class GameFrame extends JFrame{
     }
 
     public void loginMode(){
-        setTitle("Welcome");
+        setHeader("Welcome");
         if(signUpPanel != null){
             remove(signUpPanel);
         }
@@ -73,7 +74,8 @@ public class GameFrame extends JFrame{
         serverPrint.writeToServer("login:" + username + ":" + password);
     }
 
-    public void login(){
+    public void login(String username){
+        setTitle("Logged in as: " + username);
         updateScore();
         remove(logInPanel);
         add(highScorePanel, BorderLayout.WEST);
@@ -97,7 +99,6 @@ public class GameFrame extends JFrame{
     }
 
     public synchronized void drawFirstLogIn(){
-        serverPrint.writeToServer("getdrawing");
         HashSet<Point> drawing = serverReader.getDrawing();
         paper.setDrawing(drawing);
         paper.repaint();
@@ -111,7 +112,7 @@ public class GameFrame extends JFrame{
         repaint();
     }
 
-    public void setTitle(String newTitle){
+    public void setHeader(String newTitle){
         title.setText(newTitle);
     }
 }

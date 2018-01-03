@@ -16,7 +16,6 @@ import java.util.concurrent.ConcurrentHashMap;
 public class Server implements Runnable {
 
     private ConcurrentHashMap<String, Socket> players = new ConcurrentHashMap<>();
-
     private ServerSocket serverSocket;
     private PrintWriter pw;
     private String secretWord;
@@ -67,13 +66,14 @@ public class Server implements Runnable {
         }else{
             loginStatus = "OK";
             if (painter == null) {
+                painterName = username;
                 painter = socket;
                 painterStatus = "true";
             }
         }
-        writeToOneSocket(socket, "login:" + loginStatus + ":" + painterStatus + ":" + "Welcome! You are the new painter! Please write your secret word or sentence.:Server");
+        writeToOneSocket(socket, "login:" + loginStatus + ":" + painterStatus + ":" + username + ":" + "Welcome! You are the new painter! Please write your secret word or sentence.:Server");
         if(loginStatus.equals("OK")) {
-            broadCastMessage("message:", username + " logged in:server");
+            broadCastMessage("message:", username + " logged in.:server");
             players.put(username, socket);
         }
     }
@@ -160,18 +160,19 @@ public class Server implements Runnable {
     }
 
     public synchronized void removeClient(String username){
-        broadCastMessage("message:", username + " logged out:SERVER");
 
         if(painter == players.get(username)){
+            drawing.clear();
             players.remove(username);
             painter = null;
-            if(players.size() > 1) {
+            if(players.size() > 0) {
                 String newPainter = (String)players.keySet().toArray()[0];
+                broadCastMessage("message:", username + " logged out. The new painter is " + newPainter + ".:SERVER");
                 setPainter(players.get(newPainter), newPainter);
-                System.out.println((String)players.keySet().toArray()[0]);
             }
         }else {
             players.remove(username);
+            broadCastMessage("message:", username + " logged out.:SERVER");
         }
     }
 

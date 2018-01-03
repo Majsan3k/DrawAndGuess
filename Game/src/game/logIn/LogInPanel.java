@@ -1,7 +1,6 @@
 package game.logIn;
 
 import game.mainFrame.GameFrame;
-import game.serverConnection.ServerPrint;
 
 import javax.swing.*;
 import java.awt.*;
@@ -38,7 +37,7 @@ public class LogInPanel extends JPanel {
         signUp.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                gameFrame.setTitle("Sign up");
+                gameFrame.setHeader("Sign up");
                 gameFrame.signUp();
             }
         });

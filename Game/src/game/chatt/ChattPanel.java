@@ -53,7 +53,6 @@ public class ChattPanel extends JPanel{
     }
 
     public void setSecretWordMessage(boolean secretword){
-        System.out.println("Inte painter längre " + secretword);
         secretWordMessage = secretword;
     }
 
