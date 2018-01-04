@@ -20,28 +20,20 @@ public class DatabaseConnection {
     private static final String LOGIN_QUERY = "SELECT password, id FROM player WHERE BINARY username = ?";
     private static final String UPDATE_HIGHSCORE = "UPDATE highscore JOIN player ON player.id = highscore.userId " +
             "SET score = score + 1 WHERE userName = ?";
-    private static int workload = 12;
 
     private PreparedStatement prepStmt = null;
     private Statement stmt = null;
     private Connection dbCon = null;
 
     private static String hashPassword(String password_plaintext) {
-        String salt = BCrypt.gensalt(workload);
-        String hashed_password = BCrypt.hashpw(password_plaintext, salt);
-
-        return(hashed_password);
+        return BCrypt.hashpw(password_plaintext, BCrypt.gensalt());
     }
 
     public static boolean checkPassword(String password_plaintext, String stored_hash) {
-        boolean password_verified = false;
-
-        if(null == stored_hash || !stored_hash.startsWith("$2a$"))
+        if(stored_hash == null || !stored_hash.startsWith("$2a$")) {
             throw new java.lang.IllegalArgumentException("Invalid hash provided for comparison");
-
-        password_verified = BCrypt.checkpw(password_plaintext, stored_hash);
-
-        return(password_verified);
+        }
+        return BCrypt.checkpw(password_plaintext, stored_hash);
     }
 
     private void connectToDb(){

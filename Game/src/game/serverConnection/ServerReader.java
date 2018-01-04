@@ -105,10 +105,7 @@ public class ServerReader implements Runnable{
         String message;
         try {
             while((message = serverIn.readLine()) != null){
-                System.out.println(message);
-
                 String[] command = message.split(":");
-
                 switch (command[0]){
                     case "signup" :
                         signUp(command[1]);

@@ -38,7 +38,7 @@ public class DatabaseConnectionTest {
 
     @Test
     public void testLogIn(){
-        assertEquals(true, dbCon.login("Maja", "aa"));
+        assertEquals(true, dbCon.login("Simon", "a1b2c3"));
     }
 
     @Test
