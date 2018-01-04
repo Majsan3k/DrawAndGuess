@@ -15,7 +15,7 @@ public class DatabaseConnectionTest {
 
     @Test
     public void testCreateUser(){
-        assertEquals("OK", dbCon.createUser("Rarararaa", "tasdadasda"));
+        assertEquals("OK", dbCon.createUser("Maja", "aa"));
     }
 
     @Test
@@ -38,7 +38,7 @@ public class DatabaseConnectionTest {
 
     @Test
     public void testLogIn(){
-        assertEquals(1, dbCon.login("Maja", "aa"));
+        assertEquals(true, dbCon.login("Maja", "aa"));
     }
 
     @Test

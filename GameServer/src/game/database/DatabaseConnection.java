@@ -1,4 +1,5 @@
 package game.database;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -19,10 +20,29 @@ public class DatabaseConnection {
     private static final String LOGIN_QUERY = "SELECT password, id FROM player WHERE BINARY username = ?";
     private static final String UPDATE_HIGHSCORE = "UPDATE highscore JOIN player ON player.id = highscore.userId " +
             "SET score = score + 1 WHERE userName = ?";
+    private static int workload = 12;
 
     private PreparedStatement prepStmt = null;
     private Statement stmt = null;
     private Connection dbCon = null;
+
+    private static String hashPassword(String password_plaintext) {
+        String salt = BCrypt.gensalt(workload);
+        String hashed_password = BCrypt.hashpw(password_plaintext, salt);
+
+        return(hashed_password);
+    }
+
+    public static boolean checkPassword(String password_plaintext, String stored_hash) {
+        boolean password_verified = false;
+
+        if(null == stored_hash || !stored_hash.startsWith("$2a$"))
+            throw new java.lang.IllegalArgumentException("Invalid hash provided for comparison");
+
+        password_verified = BCrypt.checkpw(password_plaintext, stored_hash);
+
+        return(password_verified);
+    }
 
     private void connectToDb(){
         try {
@@ -63,7 +83,7 @@ public class DatabaseConnection {
         try {
             prepStmt = dbCon.prepareStatement(CREATE_USER);
             prepStmt.setString(1, userName);
-            prepStmt.setString(2, password);
+            prepStmt.setString(2, hashPassword(password));
             prepStmt.execute();
 
             ResultSet rs = prepStmt.getGeneratedKeys();
@@ -93,7 +113,7 @@ public class DatabaseConnection {
             prepStmt.execute();
             ResultSet rs = prepStmt.executeQuery();
             while (rs.next()) {
-                if (rs.getString("password").equals(password)) {
+                if (checkPassword(password, rs.getString("password"))) {
                     return true;
                 }
             }

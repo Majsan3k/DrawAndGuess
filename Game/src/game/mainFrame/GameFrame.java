@@ -54,7 +54,7 @@ public class GameFrame extends JFrame{
         loginMode();
 
         //TODO: Ta bort, bara för testning
-        loginRequest("Maja", "aaaaaa");
+        loginRequest("Maja", "aa");
 
         pack();
         setVisible(true);

@@ -36,7 +36,7 @@ public class HighScorePanel extends JPanel{
                 Score s = scores.get(i - 1);
                 highscoreField.append(i + ". " + s.getName() + ": " + s.getScore() + "\n\n");
             }else{
-                highscoreField.append(i + ".");
+                highscoreField.append(i + ".\n\n");
             }
         }
     }
