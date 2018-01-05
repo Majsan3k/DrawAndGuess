@@ -68,7 +68,7 @@ public class DatabaseConnection {
         }
     }
 
-    public String createUser(String userName, String password) {
+    public String createUser(String userName, String password){
         connectToDb();
         int userId = 0;
 

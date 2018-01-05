@@ -16,9 +16,7 @@ public class PlayerHandler implements Runnable {
     private Server server;
     private Socket socket;
     private BufferedReader inDataPlayer;
-    private ObjectOutputStream objOut;
     private String username = "";
-    private HashSet<Point> drawing = new HashSet<>();
 
     public PlayerHandler(Server server, Socket socket){
         this.server = server;
@@ -29,27 +27,6 @@ public class PlayerHandler implements Runnable {
         }catch(IOException e){
             System.out.println(e.getMessage());
         }
-    }
-
-    public synchronized void getHighscore(){
-        ArrayList<Score> scores = server.getHighScore();
-        try {
-            objOut = new ObjectOutputStream(socket.getOutputStream());
-            objOut.writeObject(scores);
-            objOut.flush();
-        }catch (IOException e){
-            System.out.println(e.getMessage());
-        }
-    }
-
-    private synchronized void getDrawing(){
-            try {
-                objOut = new ObjectOutputStream(socket.getOutputStream());
-                objOut.writeObject(server.getDrawing());
-                objOut.flush();
-            } catch (IOException e) {
-                System.out.println(e.getMessage());
-            }
     }
 
     @Override
@@ -69,7 +46,7 @@ public class PlayerHandler implements Runnable {
                         server.login(username, password, socket);
                         break;
                     case "getHighScore" :
-                        getHighscore();
+                        server.sendHighscore(socket);
                         break;
                     case "secretword" :
                         server.setSecretWord(command[1], socket);
@@ -86,7 +63,7 @@ public class PlayerHandler implements Runnable {
                         server.broadCastMessage("draw:", command[1]);
                         break;
                     case "getdrawing" :
-                        getDrawing();
+                        server.sendDrawing(socket);
                         break;
                     default :
                         break;
@@ -94,7 +71,6 @@ public class PlayerHandler implements Runnable {
             }
             inDataPlayer.close();
             socket.close();
-            objOut.close();
         }catch (IOException e){
             System.out.println(e.getMessage());
         }

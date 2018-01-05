@@ -24,13 +24,10 @@ public class GameFrame extends JFrame{
     private ChattPanel chattPanel;
     private SignUpPanel signUpPanel;
     private HighScorePanel highScorePanel;
-    private Socket socket;
     private ServerPrint serverPrint;
     private ServerReader serverReader;
-    private String user;
 
     public GameFrame(Socket socket) throws IOException {
-        this.socket = socket;
         this.serverPrint = new ServerPrint(socket);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -58,6 +55,10 @@ public class GameFrame extends JFrame{
 
         pack();
         setVisible(true);
+    }
+
+    public void setHeader(String newTitle){
+        title.setText(newTitle);
     }
 
     public void loginMode(){
@@ -110,9 +111,5 @@ public class GameFrame extends JFrame{
 
         pack();
         repaint();
-    }
-
-    public void setHeader(String newTitle){
-        title.setText(newTitle);
     }
 }

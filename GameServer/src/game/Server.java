@@ -5,6 +5,7 @@ import game.database.Score;
 
 import java.awt.*;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -18,6 +19,7 @@ public class Server implements Runnable {
     private ConcurrentHashMap<String, Socket> players = new ConcurrentHashMap<>();
     private ServerSocket serverSocket;
     private PrintWriter pw;
+    private ObjectOutputStream objOut;
     private String secretWord;
     private Socket painter;
     private String painterName;
@@ -32,6 +34,27 @@ public class Server implements Runnable {
         } catch (IOException e) {
             System.out.println("Couldn't connect " + e.getMessage());
             System.exit(1);
+        }
+    }
+
+    public synchronized void sendHighscore(Socket socket){
+        ArrayList<Score> scores = getHighScore();
+        try {
+            objOut = new ObjectOutputStream(socket.getOutputStream());
+            objOut.writeObject(scores);
+            objOut.flush();
+        }catch (IOException e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public synchronized void sendDrawing(Socket socket){
+        try {
+            objOut = new ObjectOutputStream(socket.getOutputStream());
+            objOut.writeObject(getDrawing());
+            objOut.flush();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
@@ -197,8 +220,7 @@ public class Server implements Runnable {
         if(args.length > 1){
             System.exit(1);
         }
-        Server server = new Server(port);
-        Thread serverThread = new Thread(server);
+        Thread serverThread = new Thread(new Server(port));
         serverThread.start();
     }
 }
