@@ -1,7 +1,6 @@
 package game.chatt;
 
 import game.mainFrame.GameFrame;
-import game.serverConnection.ServerPrint;
 
 import javax.swing.*;
 import java.awt.*;

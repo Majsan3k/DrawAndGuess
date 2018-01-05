@@ -13,14 +13,12 @@ import java.awt.*;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashSet;
 
 public class GameFrame extends JFrame{
     private JLabel title;
-
-    private Paper paper;
     private LogInPanel logInPanel;
+    private GamePanel gamePanel;
     private ChattPanel chattPanel;
     private SignUpPanel signUpPanel;
     private HighScorePanel highScorePanel;
@@ -38,18 +36,17 @@ public class GameFrame extends JFrame{
         title.setPreferredSize(new Dimension(0, 60));
         add(title, BorderLayout.PAGE_START);
 
-        paper = new Paper(this);
         chattPanel = new ChattPanel(this);
+        gamePanel = new GamePanel(this);
         logInPanel = new LogInPanel(this);
         signUpPanel = new SignUpPanel(this);
         highScorePanel = new HighScorePanel();
         serverHandler = new ServerHandler(this, socket);
 
-
         loginMode();
 
         //TODO: Ta bort, bara för testning
-        loginRequest("Maja", "aa");
+        loginRequest("Maja", "aaaaaa");
 
         pack();
         setVisible(true);
@@ -82,36 +79,36 @@ public class GameFrame extends JFrame{
     }
 
     public void loginRequest(String username, String password){
-        serverHandler.writeToServer("login:" + username + ":" + password);
+        writeToServer("login:" + username + ":" + password);
     }
 
     public void signUpRequest(String username, String password){
-        serverHandler.writeToServer("signUp:" + username + ":" + password);
+        writeToServer("signUp:" + username + ":" + password);
     }
 
     /**
      * Update the whole GameFrame. Removes the loginPanel and add highScorePanel,
      * GamePanel and chattPanel.
-     * Ask server for the current drawing.
+     * Asks server for the current drawing and draw it on gamePanel.
      * @param username
      */
     public synchronized void login(String username){
         setTitle("Logged in as: " + username);
-        updateScore();
+        serverHandler.updateScore();
         remove(logInPanel);
         add(highScorePanel, BorderLayout.WEST);
-        add(new GamePanel(paper), BorderLayout.CENTER);
+        add(gamePanel, BorderLayout.CENTER);
         add(chattPanel, BorderLayout.EAST);
-        serverHandler.writeToServer("getdrawing" );
-        drawFirstLogIn();
+        serverHandler.getDrawing();
         pack();
         repaint();
     }
 
-    public synchronized void drawFirstLogIn(){
-        HashSet<Point> drawing = serverHandler.getDrawing();
-        paper.setDrawing(drawing);
-        paper.repaint();
+    /**
+     * Gets the current drawing from server and paints it on gamePanel
+     */
+    public synchronized void drawCurrentDrawing(HashSet<Point> drawing){
+        gamePanel.setDrawing(drawing);
     }
 
     /* Handlers for handling commands from ServerHandler */
@@ -124,6 +121,15 @@ public class GameFrame extends JFrame{
         }
     }
 
+    /**
+     * Handles login. Check if the login passed on server side and if the user is the painter.
+     *
+     * @param loginStatus information from server if the login passed
+     * @param painterStatus tells if painter or not
+     * @param username
+     * @param message message to show in chattpanel after log in
+     * @param serverName servername
+     */
     public void loginHandler(String loginStatus, String painterStatus, String username, String message, String serverName){
         if(loginStatus.equalsIgnoreCase("OK")){
             login(username);
@@ -131,41 +137,64 @@ public class GameFrame extends JFrame{
             logInPanel.setErrorMessage(loginStatus);
         }
         if (painterStatus.equalsIgnoreCase("true")) {
-            paper.setPainter(true);
+            gamePanel.setPainter(true);
             chattPanel.setSecretWordMessage(true);
             chattPanel.displayMessage(serverName.toUpperCase() + ": " + message);
         }
-
     }
 
+    /**
+     * Handles chattmessages from server
+     *
+     * @param username name of the user that wrote the mssage
+     * @param message
+     */
     public void showMessageHandler(String username, String message){
         if(message.trim().contains("logged out")){
-            paper.clearPaper();
+            gamePanel.clearPaper();
         }
         chattPanel.displayMessage(username.toUpperCase() + ": " + message);
     }
 
-    public void showWinnerMessageHandler(String name, String message){
-        paper.clearPaper();
-        showMessageHandler(name, message);
+    /**
+     * Clear paper and inform about the winner of the game.
+     * @param username name of the winner
+     * @param message
+     */
+    public void showWinnerMessageHandler(String username, String message){
+        gamePanel.clearPaper();
+        showMessageHandler(username, message);
     }
 
-    public synchronized void updateScore(){
-        serverHandler.writeToServer("getHighScore");
-        ArrayList<Score> scores = serverHandler.getHighScore();
-        Collections.sort(scores);
+    /**
+     * Update highscore panel
+     * @param scores
+     */
+    public synchronized void updateScoreHandler(ArrayList<Score> scores){
         highScorePanel.fillHighscoreField(scores);
     }
 
+    /**
+     * Add point to gamePanel
+     * @param point
+     */
     public void addPointHandler(Point point){
-        paper.addPoint(point);
+        gamePanel.addPoint(point);
     }
 
-    public void setSecretWordHandler(){
-        chattPanel.setSecretWordMessage(true);
+    /**
+     * Define if server waits for the secret word
+     * @param secretWord
+     */
+    public void setSecretWordHandler(boolean secretWord){
+        chattPanel.setSecretWordMessage(secretWord);
     }
 
+    /**
+     * Define if painter or not
+     * @param painter
+     */
     public void setPainterHandler(boolean painter){
-        paper.setPainter(painter);
+        gamePanel.setPainter(painter);
     }
 }

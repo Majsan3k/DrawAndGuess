@@ -1,8 +1,5 @@
 package game.gamePanel;
 
-import game.mainFrame.GameFrame;
-import game.serverConnection.ServerPrint;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -15,10 +12,10 @@ public class Paper extends JPanel {
 
     private HashSet points = new HashSet();
     private boolean painter = false;
-    private GameFrame gameFrame;
+    private GamePanel gamePanel;
 
-    public Paper(GameFrame gameFrame){
-        this.gameFrame = gameFrame;
+    public Paper(GamePanel gamePanel){
+        this.gamePanel = gamePanel;
         setBackground(Color.WHITE);
 
         addMouseListener(new MouseAdapter() {
@@ -74,6 +71,6 @@ public class Paper extends JPanel {
 
     private void sendPoint(Point point){
         String pointToSend = Integer.toString(point.x) + ", " + Integer.toString(point.y);
-        gameFrame.writeToServer("draw:" + pointToSend);
+        gamePanel.sendPoint("draw:" + pointToSend);
     }
 }

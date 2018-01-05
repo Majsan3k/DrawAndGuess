@@ -70,7 +70,7 @@ public class SignUpPanel extends JPanel {
         invalidInfo.setForeground(Color.RED);
     }
 
-    /* Add all components with custom constraints */
+    /* Add all components to panel with custom constraints */
     private void setUpPanelComponents(){
 
         GridBagConstraints constraints = new GridBagConstraints();

@@ -81,7 +81,7 @@ public class ServerReader implements Runnable{
                         break;
                     case "secretword" :
                         serverHandler.showMessage(command[2], command[1]);
-                        serverHandler.setSecretWord();
+                        serverHandler.setSecretWord(true);
                         break;
                     case "painter" :
                         serverHandler.setPainter(command[1].equals("true"));

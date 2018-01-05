@@ -7,17 +7,18 @@ import java.awt.*;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 
 public class ServerHandler {
 
     private GameFrame gameFrame;
-    private ServerPrint serverPrint;
+    private ServerPrinter serverPrinter;
     private ServerReader serverReader;
 
     public ServerHandler(GameFrame gf, Socket socket) throws IOException{
         this.gameFrame = gf;
-        this.serverPrint = new ServerPrint(socket);
+        this.serverPrinter = new ServerPrinter(socket);
 
         serverReader = new ServerReader(socket, this);
         Thread thread = new Thread(serverReader);
@@ -26,7 +27,7 @@ public class ServerHandler {
 
     /* Communication with ServerPrinter */
     public void writeToServer(String message){
-        serverPrint.writeToServer(message);
+        serverPrinter.writeToServer(message);
     }
 
     /* Communication between GameFrame and ServerReader */
@@ -34,8 +35,10 @@ public class ServerHandler {
         return serverReader.getHighScore();
     }
 
-    public synchronized HashSet<Point> getDrawing(){
-        return serverReader.getDrawing();
+    public synchronized void getDrawing(){
+        writeToServer("getdrawing");
+        HashSet<Point> drawing = serverReader.getDrawing();
+        gameFrame.drawCurrentDrawing(drawing);
     }
 
     public void signUp(String signupStatus){
@@ -54,26 +57,23 @@ public class ServerHandler {
         gameFrame.showWinnerMessageHandler(name, message);
     }
 
-    public void updateScore(){
-        gameFrame.updateScore();
+    public synchronized void updateScore(){
+        writeToServer("getHighScore");
+        ArrayList<Score> scores = getHighScore();
+        Collections.sort(scores);
+        gameFrame.updateScoreHandler(scores);
     }
 
     public void addPoint(Point point){
         gameFrame.addPointHandler(point);
     }
 
-    public void setSecretWord(){
-        gameFrame.setSecretWordHandler();
+    public void setSecretWord(boolean secretWord){
+        gameFrame.setSecretWordHandler(secretWord);
     }
 
     public void setPainter(boolean painter){
         gameFrame.setPainterHandler(painter);
     }
-
-
-
-
-
-
 
 }

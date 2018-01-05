@@ -4,11 +4,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-public class ServerPrint {
+public class ServerPrinter {
 
     private PrintWriter pw;
 
-    public ServerPrint(Socket socket) throws IOException {
+    public ServerPrinter(Socket socket) throws IOException {
         this.pw = new PrintWriter(socket.getOutputStream(), true);
     }
 
