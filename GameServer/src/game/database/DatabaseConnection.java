@@ -17,7 +17,7 @@ public class DatabaseConnection {
     private static final String INSERT_HIGHSCORE = "INSERT INTO highscore (score, userId) VALUES (?, ?)";
     private static final String GET_HIGHSCORE = "SELECT score, userName FROM player JOIN highscore " +
             "ON player.id = highscore.userId ORDER BY score";
-    private static final String LOGIN_QUERY = "SELECT password, id FROM player WHERE BINARY username = ?";
+    private static final String LOGIN_QUERY = "SELECT password FROM player WHERE username = ?";
     private static final String UPDATE_HIGHSCORE = "UPDATE highscore JOIN player ON player.id = highscore.userId " +
             "SET score = score + 1 WHERE userName = ?";
 
