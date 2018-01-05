@@ -15,7 +15,7 @@ public class ChattPanel extends JPanel{
     private GameFrame gameFrame;
     private boolean secretWordMessage;
 
-    public ChattPanel(GameFrame gameFrame, ServerPrint serverPrint){
+    public ChattPanel(GameFrame gameFrame){
 
         this.gameFrame = gameFrame;
         setPreferredSize(new Dimension(250, 0));
@@ -34,9 +34,9 @@ public class ChattPanel extends JPanel{
                 if (e.getKeyCode() == KeyEvent.VK_ENTER) {
                     if(secretWordMessage){
                         secretWordMessage = false;
-                        serverPrint.writeToServer("secretword:" + writeMessage.getText());
+                        gameFrame.writeToServer("secretword:" + writeMessage.getText());
                     }else {
-                        serverPrint.writeToServer("message:" + writeMessage.getText());
+                        gameFrame.writeToServer("message:" + writeMessage.getText());
                     }
                     writeMessage.setText("");
                 }

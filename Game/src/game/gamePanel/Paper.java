@@ -1,5 +1,6 @@
 package game.gamePanel;
 
+import game.mainFrame.GameFrame;
 import game.serverConnection.ServerPrint;
 
 import javax.swing.*;
@@ -14,10 +15,10 @@ public class Paper extends JPanel {
 
     private HashSet points = new HashSet();
     private boolean painter = false;
-    private ServerPrint serverPrint;
+    private GameFrame gameFrame;
 
-    public Paper(ServerPrint serverPrint){
-        this.serverPrint = serverPrint;
+    public Paper(GameFrame gameFrame){
+        this.gameFrame = gameFrame;
         setBackground(Color.WHITE);
 
         addMouseListener(new MouseAdapter() {
@@ -41,7 +42,7 @@ public class Paper extends JPanel {
         this.points = points;
     }
 
-    public void paintComponent(Graphics g) {
+    public synchronized void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.setColor(Color.black);
         Iterator i = points.iterator();
@@ -51,13 +52,13 @@ public class Paper extends JPanel {
         }
     }
 
-    private void drawPoint(Point p){
+    private synchronized void drawPoint(Point p){
         points.add(p);
         sendPoint(p);
         repaint();
     }
 
-    public void addPoint(Point p){
+    public synchronized void addPoint(Point p){
         points.add(p);
         repaint();
     }
@@ -66,13 +67,13 @@ public class Paper extends JPanel {
         this.painter = painter;
     }
 
-    public void clearPaper(){
+    public synchronized void clearPaper(){
         points.clear();
         repaint();
     }
 
     private void sendPoint(Point point){
         String pointToSend = Integer.toString(point.x) + ", " + Integer.toString(point.y);
-        serverPrint.writeToServer("draw:" + pointToSend);
+        gameFrame.writeToServer("draw:" + pointToSend);
     }
 }

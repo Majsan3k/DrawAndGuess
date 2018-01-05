@@ -7,19 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a256f28e-5755-44e5-884d-0a95c7607d1b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/game/serverConnection/ServerHandler.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/Game/game/Test.uml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Game/game/chatt/ChattPanel$1.class" afterPath="$PROJECT_DIR$/out/production/Game/game/chatt/ChattPanel$1.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Game/game/chatt/ChattPanel.class" afterPath="$PROJECT_DIR$/out/production/Game/game/chatt/ChattPanel.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Game/game/gamePanel/Paper$1.class" afterPath="$PROJECT_DIR$/out/production/Game/game/gamePanel/Paper$1.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Game/game/gamePanel/Paper$2.class" afterPath="$PROJECT_DIR$/out/production/Game/game/gamePanel/Paper$2.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Game/game/gamePanel/Paper.class" afterPath="$PROJECT_DIR$/out/production/Game/game/gamePanel/Paper.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Game/game/mainFrame/Game.class" afterPath="$PROJECT_DIR$/out/production/Game/game/mainFrame/Game.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Game/game/mainFrame/GameFrame.class" afterPath="$PROJECT_DIR$/out/production/Game/game/mainFrame/GameFrame.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Game/game/serverConnection/ServerReader.class" afterPath="$PROJECT_DIR$/out/production/Game/game/serverConnection/ServerReader.class" />
-      <change beforePath="$PROJECT_DIR$/src/game/Test.uml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/game/mainFrame/Game.java" afterPath="$PROJECT_DIR$/src/game/mainFrame/Game.java" />
+      <change beforePath="$PROJECT_DIR$/src/game/chatt/ChattPanel.java" afterPath="$PROJECT_DIR$/src/game/chatt/ChattPanel.java" />
+      <change beforePath="$PROJECT_DIR$/src/game/gamePanel/Paper.java" afterPath="$PROJECT_DIR$/src/game/gamePanel/Paper.java" />
       <change beforePath="$PROJECT_DIR$/src/game/mainFrame/GameFrame.java" afterPath="$PROJECT_DIR$/src/game/mainFrame/GameFrame.java" />
+      <change beforePath="$PROJECT_DIR$/src/game/serverConnection/ServerHandler.java" afterPath="$PROJECT_DIR$/src/game/serverConnection/ServerHandler.java" />
+      <change beforePath="$PROJECT_DIR$/src/game/serverConnection/ServerReader.java" afterPath="$PROJECT_DIR$/src/game/serverConnection/ServerReader.java" />
       <change beforePath="$PROJECT_DIR$/../GameServer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../GameServer/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../GameServer/out/production/GameServer/game/PlayerHandler.class" afterPath="$PROJECT_DIR$/../GameServer/out/production/GameServer/game/PlayerHandler.class" />
       <change beforePath="$PROJECT_DIR$/../GameServer/out/production/GameServer/game/Server.class" afterPath="$PROJECT_DIR$/../GameServer/out/production/GameServer/game/Server.class" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/out/production/GameServer/game/database/DatabaseConnection.class" afterPath="$PROJECT_DIR$/../GameServer/out/production/GameServer/game/database/DatabaseConnection.class" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/src/game/PlayerHandler.java" afterPath="$PROJECT_DIR$/../GameServer/src/game/PlayerHandler.java" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/src/game/Server.java" afterPath="$PROJECT_DIR$/../GameServer/src/game/Server.java" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/src/game/database/DatabaseConnection.java" afterPath="$PROJECT_DIR$/../GameServer/src/game/database/DatabaseConnection.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,379 +38,26 @@
     <favorites_list name="CodeIris Favorites" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44613436">
+    <splitter split-orientation="horizontal" split-proportion="0.46341464">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file leaf-file-name="GameFrame.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/game/mainFrame/GameFrame.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="46" column="27" lean-forward="false" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+                <state relative-caret-position="296">
+                  <caret line="100" column="27" lean-forward="true" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
                   <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1797#1798#0" expanded="true" />
-                    <element signature="e#1836#1837#0" expanded="true" />
-                    <element signature="method#signUpRequest#0;class#GameFrame#0" expanded="false" />
-                    <element signature="method#updateScore#0;class#GameFrame#0" expanded="false" />
-                    <element signature="method#drawFirstLogIn#0;class#GameFrame#0" expanded="false" />
+                    <element signature="e#1576#1577#0" expanded="true" />
+                    <element signature="e#1615#1616#0" expanded="true" />
+                    <element signature="e#2056#2057#0" expanded="true" />
+                    <element signature="e#2108#2109#0" expanded="true" />
+                    <element signature="e#4719#4720#0" expanded="true" />
+                    <element signature="e#4756#4757#0" expanded="true" />
+                    <element signature="e#4797#4798#0" expanded="true" />
+                    <element signature="e#4850#4851#0" expanded="true" />
+                    <element signature="e#4903#4904#0" expanded="true" />
+                    <element signature="e#4944#4945#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Paket.uml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/game/Paket.uml">
-              <provider selected="true" editor-type-id="UmlEditorProvider">
-                <state>
-                  <ID>JAVA</ID>
-                  <OriginalElement />
-                  <nodes>
-                    <node x="520.4834846313106" y="0.0">game.database</node>
-                    <node x="412.04999999999995" y="274.0">game.mainFrame</node>
-                    <node x="550.5" y="87.0">game.highscore</node>
-                    <node x="226.5" y="87.0">game.signUp</node>
-                    <node x="456.1104687582948" y="518.0">game.chatt</node>
-                    <node x="30.5" y="87.0">game.gamePanel</node>
-                    <node x="394.5" y="87.0">game.logIn</node>
-                    <node x="153.6" y="421.0">game.serverConnection</node>
-                  </nodes>
-                  <notes />
-                  <edges>
-                    <edge source="game.serverConnection" target="game.database">
-                      <point x="-99.69230769230768" y="-18.5" />
-                      <point x="161.90769230769232" y="401.0" />
-                      <point x="0.0" y="401.0" />
-                      <point x="0.0" y="62.0" />
-                      <point x="547.6501512979773" y="62.0" />
-                      <point x="-54.333333333333314" y="18.5" />
-                    </edge>
-                    <edge source="game.mainFrame" target="game.mainFrame">
-                      <point x="-78.22222222222223" y="18.5" />
-                      <point x="421.8277777777778" y="331.0" />
-                      <point x="392.04999999999995" y="331.0" />
-                      <point x="392.04999999999995" y="292.5" />
-                      <point x="-88.0" y="-0.0" />
-                    </edge>
-                    <edge source="game.gamePanel" target="game.gamePanel">
-                      <point x="-75.42857142857144" y="18.5" />
-                      <point x="43.071428571428555" y="144.0" />
-                      <point x="10.5" y="144.0" />
-                      <point x="10.5" y="105.5" />
-                      <point x="-88.0" y="-0.0" />
-                    </edge>
-                    <edge source="game.logIn" target="game.mainFrame">
-                      <point x="54.400000000000034" y="18.5" />
-                      <point x="516.9000000000001" y="164.0" />
-                      <point x="532.05" y="164.0" />
-                      <point x="32.0" y="-18.5" />
-                    </edge>
-                    <edge source="game.signUp" target="game.mainFrame">
-                      <point x="59.19999999999999" y="18.5" />
-                      <point x="359.7" y="194.0" />
-                      <point x="484.04999999999995" y="194.0" />
-                      <point x="-16.0" y="-18.5" />
-                    </edge>
-                    <edge source="game.mainFrame" target="game.serverConnection">
-                      <point x="-19.555555555555543" y="18.5" />
-                      <point x="480.4944444444444" y="391.0" />
-                      <point x="344.6769230769231" y="391.0" />
-                      <point x="83.0769230769231" y="-18.5" />
-                    </edge>
-                    <edge source="game.serverConnection" target="game.logIn">
-                      <point x="33.230769230769226" y="-18.5" />
-                      <point x="294.8307692307692" y="361.0" />
-                      <point x="381.54999999999995" y="361.0" />
-                      <point x="381.54999999999995" y="254.0" />
-                      <point x="435.3" y="254.0" />
-                      <point x="-27.19999999999999" y="18.5" />
-                    </edge>
-                    <edge source="game.mainFrame" target="game.signUp">
-                      <point x="-32.0" y="-18.5" />
-                      <point x="468.04999999999995" y="204.0" />
-                      <point x="330.09999999999997" y="204.0" />
-                      <point x="29.599999999999966" y="18.5" />
-                    </edge>
-                    <edge source="game.gamePanel" target="game.serverConnection">
-                      <point x="0.0" y="18.5" />
-                      <point x="118.5" y="244.0" />
-                      <point x="111.42857142857139" y="244.0" />
-                      <point x="111.42857142857139" y="371.0" />
-                      <point x="211.75384615384613" y="371.0" />
-                      <point x="-49.84615384615387" y="-18.5" />
-                    </edge>
-                    <edge source="game.highscore" target="game.database">
-                      <point x="0.0" y="-18.5" />
-                      <point x="633.5" y="62.0" />
-                      <point x="601.9834846313106" y="62.0" />
-                      <point x="0.0" y="18.5" />
-                    </edge>
-                    <edge source="game.mainFrame" target="game.gamePanel">
-                      <point x="-64.0" y="-18.5" />
-                      <point x="436.04999999999995" y="224.0" />
-                      <point x="193.92857142857144" y="224.0" />
-                      <point x="75.42857142857144" y="18.5" />
-                    </edge>
-                    <edge source="game.serverConnection" target="game.gamePanel">
-                      <point x="-66.46153846153845" y="-18.5" />
-                      <point x="195.13846153846154" y="381.0" />
-                      <point x="95.38694590433715" y="381.0" />
-                      <point x="95.38694590433715" y="254.0" />
-                      <point x="93.35714285714289" y="254.0" />
-                      <point x="-25.14285714285711" y="18.5" />
-                    </edge>
-                    <edge source="game.mainFrame" target="game.logIn">
-                      <point x="16.0" y="-18.5" />
-                      <point x="516.05" y="174.0" />
-                      <point x="489.7" y="174.0" />
-                      <point x="27.19999999999999" y="18.5" />
-                    </edge>
-                    <edge source="game.chatt" target="game.serverConnection">
-                      <point x="-57.85714285714289" y="-18.5" />
-                      <point x="465.7533259011519" y="498.0" />
-                      <point x="189.6" y="498.0" />
-                      <point x="-72.0" y="18.5" />
-                    </edge>
-                    <edge source="game.mainFrame" target="game.chatt">
-                      <point x="39.111111111111086" y="18.5" />
-                      <point x="539.161111111111" y="401.0" />
-                      <point x="543.4388888888889" y="401.0" />
-                      <point x="19.285714285714278" y="-18.5" />
-                    </edge>
-                    <edge source="game.mainFrame" target="game.highscore">
-                      <point x="48.0" y="-18.5" />
-                      <point x="548.05" y="234.0" />
-                      <point x="592.0" y="234.0" />
-                      <point x="-41.5" y="18.5" />
-                    </edge>
-                    <edge source="game.serverConnection" target="game.chatt">
-                      <point x="72.0" y="18.5" />
-                      <point x="333.6" y="478.0" />
-                      <point x="504.32475447258054" y="478.0" />
-                      <point x="-19.285714285714306" y="-18.5" />
-                    </edge>
-                    <edge source="game.chatt" target="game.mainFrame">
-                      <point x="38.571428571428584" y="-18.5" />
-                      <point x="562.1818973297234" y="498.0" />
-                      <point x="554.4388888888889" y="498.0" />
-                      <point x="554.4388888888889" y="401.0" />
-                      <point x="558.7166666666667" y="401.0" />
-                      <point x="58.666666666666686" y="18.5" />
-                    </edge>
-                    <edge source="game.serverConnection" target="game.mainFrame">
-                      <point x="49.84615384615387" y="-18.5" />
-                      <point x="311.44615384615383" y="371.0" />
-                      <point x="441.3833333333333" y="371.0" />
-                      <point x="-58.666666666666686" y="18.5" />
-                    </edge>
-                    <edge source="game.serverConnection" target="game.signUp">
-                      <point x="0.0" y="-18.5" />
-                      <point x="261.6" y="254.0" />
-                      <point x="270.9" y="254.0" />
-                      <point x="-29.600000000000023" y="18.5" />
-                    </edge>
-                    <edge source="game.mainFrame" target="game.database">
-                      <point x="80.0" y="-18.5" />
-                      <point x="580.05" y="254.0" />
-                      <point x="727.0" y="254.0" />
-                      <point x="727.0" y="62.0" />
-                      <point x="656.3168179646441" y="62.0" />
-                      <point x="54.33333333333337" y="18.5" />
-                    </edge>
-                  </edges>
-                  <settings layout="Hierarchic Group" zoom="1.0" x="3.0" y="229.0" />
-                  <SelectedNodes>
-                    <node>game.highscore</node>
-                  </SelectedNodes>
-                  <Categories />
-                  <SCOPE>All</SCOPE>
-                  <VISIBILITY>private</VISIBILITY>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Klasser.uml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/game/Klasser.uml">
-              <provider selected="true" editor-type-id="UmlEditorProvider">
-                <state>
-                  <ID>JAVA</ID>
-                  <OriginalElement />
-                  <nodes>
-                    <node x="657.6886904761905" y="87.0">game.gamePanel.Paper</node>
-                    <node x="0.0" y="214.0">game.highscore.HighScorePanel</node>
-                    <node x="397.8886904761905" y="87.0">game.signUp.SignUpPanel</node>
-                    <node x="469.8886904761905" y="478.0">game.mainFrame.Game</node>
-                    <node x="121.8886904761905" y="87.0">game.database.Score</node>
-                    <node x="778.6886904761905" y="87.0">game.chatt.ChattPanel</node>
-                    <node x="781.9654761904762" y="0.0">game.serverConnection.ServerPrint</node>
-                    <node x="449.3886904761905" y="391.0">game.mainFrame.GameFrame</node>
-                    <node x="241.8886904761905" y="87.0">game.logIn.LogInPanel</node>
-                    <node x="617.7997023809523" y="214.0">game.gamePanel.GamePanel</node>
-                    <node x="446.7997023809524" y="214.0">game.serverConnection.ServerReader</node>
-                  </nodes>
-                  <notes />
-                  <edges>
-                    <edge source="game.serverConnection.ServerReader" target="game.chatt.ChattPanel">
-                      <point x="67.11111111111109" y="-18.5" />
-                      <point x="589.4108134920634" y="194.0" />
-                      <point x="812.1886904761905" y="194.0" />
-                      <point x="-33.5" y="18.5" />
-                    </edge>
-                    <edge source="game.mainFrame.GameFrame" target="game.signUp.SignUpPanel">
-                      <point x="-22.75" y="-18.5" />
-                      <point x="498.1386904761905" y="301.0" />
-                      <point x="416.4654761904762" y="301.0" />
-                      <point x="416.4654761904762" y="184.0" />
-                      <point x="441.9886904761905" y="184.0" />
-                      <point x="-29.399999999999977" y="18.5" />
-                    </edge>
-                    <edge source="game.chatt.ChattPanel" target="game.mainFrame.GameFrame">
-                      <point x="55.833333333333314" y="18.5" />
-                      <point x="901.5220238095237" y="194.0" />
-                      <point x="893.4776785714286" y="194.0" />
-                      <point x="893.4776785714286" y="351.0" />
-                      <point x="576.1386904761905" y="351.0" />
-                      <point x="55.25" y="-18.5" />
-                    </edge>
-                    <edge source="game.serverConnection.ServerReader" target="game.gamePanel.Paper">
-                      <point x="16.77777777777777" y="-18.5" />
-                      <point x="539.0774801587302" y="154.0" />
-                      <point x="667.7886904761905" y="154.0" />
-                      <point x="-40.39999999999998" y="18.5" />
-                    </edge>
-                    <edge source="game.gamePanel.Paper" target="game.serverConnection.ServerPrint">
-                      <point x="-25.25" y="-18.5" />
-                      <point x="682.9386904761905" y="57.0" />
-                      <point x="795.3654761904762" y="57.0" />
-                      <point x="-53.6" y="18.5" />
-                    </edge>
-                    <edge source="game.mainFrame.GameFrame" target="game.gamePanel.Paper">
-                      <point x="22.75" y="-18.5" />
-                      <point x="543.6386904761905" y="301.0" />
-                      <point x="791.1330357142857" y="301.0" />
-                      <point x="791.1330357142857" y="174.0" />
-                      <point x="728.3886904761905" y="174.0" />
-                      <point x="20.20000000000006" y="18.5" />
-                    </edge>
-                    <edge source="game.gamePanel.GamePanel" target="game.gamePanel.Paper">
-                      <point x="0.0" y="-18.5" />
-                      <point x="686.7997023809523" y="174.0" />
-                      <point x="708.1886904761905" y="174.0" />
-                      <point x="0.0" y="18.5" />
-                    </edge>
-                    <edge source="game.logIn.LogInPanel" target="game.mainFrame.GameFrame">
-                      <point x="-27.19999999999999" y="18.5" />
-                      <point x="282.6886904761905" y="194.0" />
-                      <point x="268.5654761904762" y="194.0" />
-                      <point x="268.5654761904762" y="331.0" />
-                      <point x="478.6386904761905" y="331.0" />
-                      <point x="-42.25" y="-18.5" />
-                    </edge>
-                    <edge source="game.mainFrame.GameFrame" target="game.gamePanel.GamePanel">
-                      <point x="16.25" y="-18.5" />
-                      <point x="537.1386904761905" y="291.0" />
-                      <point x="686.7997023809523" y="291.0" />
-                      <point x="0.0" y="18.5" />
-                    </edge>
-                    <edge source="game.mainFrame.GameFrame" target="game.highscore.HighScorePanel">
-                      <point x="-68.25" y="-18.5" />
-                      <point x="452.6386904761905" y="371.0" />
-                      <point x="42.0" y="371.0" />
-                      <point x="-42.0" y="18.5" />
-                    </edge>
-                    <edge source="game.mainFrame.Game" target="game.mainFrame.GameFrame">
-                      <point x="0.0" y="-18.5" />
-                      <point x="0.0" y="18.5" />
-                    </edge>
-                    <edge source="game.mainFrame.GameFrame" target="game.database.Score">
-                      <point x="-55.25" y="-18.5" />
-                      <point x="465.6386904761905" y="351.0" />
-                      <point x="178.5" y="351.0" />
-                      <point x="178.5" y="194.0" />
-                      <point x="171.8886904761905" y="194.0" />
-                      <point x="0.0" y="18.5" />
-                    </edge>
-                    <edge source="game.mainFrame.GameFrame" target="game.serverConnection.ServerReader">
-                      <point x="-9.75" y="-18.5" />
-                      <point x="511.1386904761905" y="281.0" />
-                      <point x="465.6747023809524" y="281.0" />
-                      <point x="-56.625" y="18.5" />
-                    </edge>
-                    <edge source="game.mainFrame.GameFrame" target="game.serverConnection.ServerPrint">
-                      <point x="68.25" y="-18.5" />
-                      <point x="589.1386904761905" y="371.0" />
-                      <point x="929.6886904761905" y="371.0" />
-                      <point x="929.6886904761905" y="57.0" />
-                      <point x="902.5654761904761" y="57.0" />
-                      <point x="53.599999999999966" y="18.5" />
-                    </edge>
-                    <edge source="game.mainFrame.GameFrame" target="game.logIn.LogInPanel">
-                      <point x="-35.75" y="-18.5" />
-                      <point x="485.1386904761905" y="321.0" />
-                      <point x="289.1886904761905" y="321.0" />
-                      <point x="289.1886904761905" y="194.0" />
-                      <point x="309.8886904761905" y="194.0" />
-                      <point x="0.0" y="18.5" />
-                    </edge>
-                    <edge source="game.highscore.HighScorePanel" target="game.database.Score">
-                      <point x="0.0" y="-18.5" />
-                      <point x="84.0" y="194.0" />
-                      <point x="138.55535714285713" y="194.0" />
-                      <point x="-33.33333333333337" y="18.5" />
-                    </edge>
-                    <edge source="game.serverConnection.ServerReader" target="game.database.Score">
-                      <point x="-67.11111111111109" y="-18.5" />
-                      <point x="455.1885912698413" y="164.0" />
-                      <point x="205.22202380952388" y="164.0" />
-                      <point x="33.33333333333337" y="18.5" />
-                    </edge>
-                    <edge source="game.serverConnection.ServerReader" target="game.signUp.SignUpPanel">
-                      <point x="0.0" y="-18.5" />
-                      <point x="522.2997023809523" y="194.0" />
-                      <point x="530.1886904761905" y="194.0" />
-                      <point x="58.80000000000001" y="18.5" />
-                    </edge>
-                    <edge source="game.chatt.ChattPanel" target="game.serverConnection.ServerPrint">
-                      <point x="0.0" y="-18.5" />
-                      <point x="845.6886904761905" y="67.0" />
-                      <point x="848.9654761904762" y="67.0" />
-                      <point x="0.0" y="18.5" />
-                    </edge>
-                    <edge source="game.mainFrame.GameFrame" target="game.chatt.ChattPanel">
-                      <point x="35.75" y="-18.5" />
-                      <point x="556.6386904761905" y="321.0" />
-                      <point x="854.5675595238096" y="321.0" />
-                      <point x="854.5675595238096" y="194.0" />
-                      <point x="834.5220238095237" y="194.0" />
-                      <point x="-11.166666666666686" y="18.5" />
-                    </edge>
-                    <edge source="game.serverConnection.ServerReader" target="game.logIn.LogInPanel">
-                      <point x="-33.55555555555554" y="-18.5" />
-                      <point x="488.74414682539685" y="144.0" />
-                      <point x="364.2886904761905" y="144.0" />
-                      <point x="54.39999999999998" y="18.5" />
-                    </edge>
-                    <edge source="game.signUp.SignUpPanel" target="game.mainFrame.GameFrame">
-                      <point x="-58.80000000000001" y="18.5" />
-                      <point x="412.58869047619044" y="174.0" />
-                      <point x="409.9654761904762" y="174.0" />
-                      <point x="409.9654761904762" y="311.0" />
-                      <point x="491.6386904761905" y="311.0" />
-                      <point x="-29.25" y="-18.5" />
-                    </edge>
-                    <edge source="game.serverConnection.ServerReader" target="game.mainFrame.GameFrame">
-                      <point x="18.875" y="18.5" />
-                      <point x="541.1747023809523" y="271.0" />
-                      <point x="524.1386904761905" y="271.0" />
-                      <point x="3.25" y="-18.5" />
-                    </edge>
-                  </edges>
-                  <settings layout="Hierarchic Group" zoom="1.0" x="183.5" y="204.0" />
-                  <SelectedNodes>
-                    <node>game.serverConnection.ServerReader</node>
-                  </SelectedNodes>
-                  <Categories />
-                  <SCOPE>All</SCOPE>
-                  <VISIBILITY>private</VISIBILITY>
                 </state>
               </provider>
             </entry>
@@ -427,8 +79,8 @@
           <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/game/mainFrame/Game.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="672">
-                  <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+                <state relative-caret-position="210">
+                  <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -439,8 +91,8 @@
           <file leaf-file-name="HighScorePanel.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/game/highscore/HighScorePanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="714">
-                  <caret line="38" column="48" lean-forward="false" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
+                <state relative-caret-position="798">
+                  <caret line="38" column="44" lean-forward="false" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -469,16 +121,10 @@
           <file leaf-file-name="ServerReader.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/game/serverConnection/ServerReader.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="382">
-                  <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+                <state relative-caret-position="307">
+                  <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
                   <folding>
-                    <element signature="method#ServerReader#0;class#ServerReader#0" expanded="false" />
-                    <element signature="method#signUp#0;class#ServerReader#0" expanded="false" />
-                    <element signature="method#login#0;class#ServerReader#0" expanded="false" />
-                    <element signature="method#getHighScore#0;class#ServerReader#0" expanded="false" />
-                    <element signature="method#showMessage#0;class#ServerReader#0" expanded="false" />
-                    <element signature="method#showWinnerMessage#0;class#ServerReader#0" expanded="false" />
-                    <element signature="method#run#0;class#ServerReader#0" expanded="false" />
+                    <element signature="method#getDrawing#0;class#ServerReader#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -487,23 +133,13 @@
           <file leaf-file-name="ServerHandler.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/game/serverConnection/ServerHandler.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Paper.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/game/gamePanel/Paper.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1155">
-                  <caret line="68" column="20" lean-forward="false" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+                <state relative-caret-position="270">
+                  <caret line="57" column="31" lean-forward="false" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
                   <folding>
-                    <element signature="e#1076#1077#0" expanded="true" />
-                    <element signature="e#1112#1113#0" expanded="true" />
-                    <element signature="e#1626#1627#0" expanded="true" />
-                    <element signature="e#1664#1665#0" expanded="true" />
+                    <element signature="method#ServerHandler#0;class#ServerHandler#0" expanded="false" />
+                    <element signature="e#740#741#0" expanded="true" />
+                    <element signature="e#790#791#0" expanded="true" />
+                    <element signature="e#1700#1701#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -513,38 +149,9 @@
             <entry file="file://$PROJECT_DIR$/src/game/serverConnection/ServerPrint.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="294">
-                  <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+                  <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
                   <folding>
-                    <element signature="imports" expanded="true" />
                     <element signature="e#348#349#0" expanded="true" />
-                    <element signature="e#383#384#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GamePanel.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/game/gamePanel/GamePanel.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="147">
-                  <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ChattPanel.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/game/chatt/ChattPanel.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="651">
-                  <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
-                  <folding>
-                    <element signature="e#1825#1826#0" expanded="true" />
-                    <element signature="e#1871#1872#0" expanded="true" />
-                    <element signature="e#1920#1921#0" expanded="true" />
-                    <element signature="e#1972#1973#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -566,7 +173,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>wa</find>
       <find>&quot;X</find>
       <find>&quot;O</find>
       <find>system</find>
@@ -596,6 +202,7 @@
       <find>drawing</find>
       <find>score</find>
       <find>serve</find>
+      <find>getDrw</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\majal\Documents\Internetprogrammering\Game\src</dir>
@@ -660,13 +267,13 @@
         <option value="$PROJECT_DIR$/src/game/gamePanel/GamePanel.java" />
         <option value="$PROJECT_DIR$/src/game/database/Score.java" />
         <option value="$PROJECT_DIR$/src/game/signUp/SignUpPanel.java" />
-        <option value="$PROJECT_DIR$/src/game/gamePanel/Paper.java" />
         <option value="$PROJECT_DIR$/src/game/chatt/ChattPanel.java" />
         <option value="$PROJECT_DIR$/src/game/highscore/HighScorePanel.java" />
-        <option value="$PROJECT_DIR$/src/game/serverConnection/ServerReader.java" />
         <option value="$PROJECT_DIR$/src/game/mainFrame/Game.java" />
-        <option value="$PROJECT_DIR$/src/game/mainFrame/GameFrame.java" />
+        <option value="$PROJECT_DIR$/src/game/gamePanel/Paper.java" />
         <option value="$PROJECT_DIR$/src/game/serverConnection/ServerHandler.java" />
+        <option value="$PROJECT_DIR$/src/game/serverConnection/ServerReader.java" />
+        <option value="$PROJECT_DIR$/src/game/mainFrame/GameFrame.java" />
       </list>
     </option>
   </component>
@@ -698,8 +305,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -778,7 +383,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -1113,7 +720,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85163000" />
+    <option name="totallyTimeSpent" value="88810000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1136,14 +743,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2360044" sideWeight="0.50208336" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13274336" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" x="0" y="365" width="1920" height="300" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21953897" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" x="0" y="365" width="1920" height="300" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.178125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1671875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1481888" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26893523" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1152,14 +759,35 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2360044" sideWeight="0.50208336" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29527992" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Code Iris" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32821077" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32821077" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13274336" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" x="0" y="365" width="1920" height="300" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.178125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="UML design tool window" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1170,12 +798,19 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="47" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/game/mainFrame/GameFrame.java</url>
+          <line>153</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="48" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/old/GameFrame.java" />
     <entry file="file://$PROJECT_DIR$/src/highScore/HighScorePanel.java" />
     <entry file="file://$PROJECT_DIR$/src/game/gamePanel/GamePlan.java" />
     <entry file="file://$PROJECT_DIR$/src/panels.java" />
@@ -1279,28 +914,7 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/modules.uml" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/modules1.uml" />
-    <entry file="file://$PROJECT_DIR$/src/game/Test.uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement />
-          <nodes>
-            <node x="" y="">game.signUp.SignUpPanel</node>
-            <node x="" y="">game.mainFrame.Game</node>
-            <node x="" y="">game.database.Score</node>
-            <node x="" y="">game.logIn.LogInPanel</node>
-            <node x="" y="">game.mainFrame.GameFrame</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="152.0" y="186.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Test.uml" />
     <entry file="file://$PROJECT_DIR$/src/game/logIn/LogInPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -1325,68 +939,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/highscore/HighScorePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="38" column="48" lean-forward="false" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/chatt/ChattPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+        <state relative-caret-position="672">
+          <caret line="38" column="33" lean-forward="false" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
           <folding>
-            <element signature="e#1825#1826#0" expanded="true" />
-            <element signature="e#1871#1872#0" expanded="true" />
-            <element signature="e#1920#1921#0" expanded="true" />
-            <element signature="e#1972#1973#0" expanded="true" />
+            <element signature="e#1796#1797#0" expanded="true" />
+            <element signature="e#1842#1843#0" expanded="true" />
+            <element signature="e#1891#1892#0" expanded="true" />
+            <element signature="e#1943#1944#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/gamePanel/GamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
+        <state relative-caret-position="126">
           <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/gamePanel/Paper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="68" column="20" lean-forward="false" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
-          <folding>
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1112#1113#0" expanded="true" />
-            <element signature="e#1626#1627#0" expanded="true" />
-            <element signature="e#1664#1665#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/serverConnection/ServerPrint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/mainFrame/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1567,178 +1146,157 @@
           <ID>JAVA</ID>
           <OriginalElement />
           <nodes>
-            <node x="657.6886904761905" y="87.0">game.gamePanel.Paper</node>
-            <node x="0.0" y="214.0">game.highscore.HighScorePanel</node>
-            <node x="397.8886904761905" y="87.0">game.signUp.SignUpPanel</node>
-            <node x="469.8886904761905" y="478.0">game.mainFrame.Game</node>
-            <node x="121.8886904761905" y="87.0">game.database.Score</node>
-            <node x="778.6886904761905" y="87.0">game.chatt.ChattPanel</node>
-            <node x="781.9654761904762" y="0.0">game.serverConnection.ServerPrint</node>
-            <node x="449.3886904761905" y="391.0">game.mainFrame.GameFrame</node>
-            <node x="241.8886904761905" y="87.0">game.logIn.LogInPanel</node>
-            <node x="617.7997023809523" y="214.0">game.gamePanel.GamePanel</node>
-            <node x="446.7997023809524" y="214.0">game.serverConnection.ServerReader</node>
+            <node x="1016.375" y="87.0">game.gamePanel.Paper</node>
+            <node x="154.0" y="194.0">game.highscore.HighScorePanel</node>
+            <node x="625.375" y="194.0">game.signUp.SignUpPanel</node>
+            <node x="581.375" y="458.0">game.mainFrame.Game</node>
+            <node x="429.89866071428565" y="0.0">game.database.Score</node>
+            <node x="560.875" y="371.0">game.mainFrame.GameFrame</node>
+            <node x="0.0" y="194.0">game.chatt.ChattPanel</node>
+            <node x="459.375" y="87.0">game.serverConnection.ServerPrint</node>
+            <node x="792.375" y="194.0">game.logIn.LogInPanel</node>
+            <node x="948.375" y="194.0">game.gamePanel.GamePanel</node>
+            <node x="288.375" y="87.0">game.serverConnection.ServerReader</node>
+            <node x="362.34624999999994" y="194.0">game.serverConnection.ServerHandler</node>
           </nodes>
           <notes />
           <edges>
-            <edge source="game.serverConnection.ServerReader" target="game.chatt.ChattPanel">
-              <point x="67.11111111111109" y="-18.5" />
-              <point x="589.4108134920634" y="194.0" />
-              <point x="812.1886904761905" y="194.0" />
-              <point x="-33.5" y="18.5" />
-            </edge>
             <edge source="game.mainFrame.GameFrame" target="game.signUp.SignUpPanel">
-              <point x="-22.75" y="-18.5" />
-              <point x="498.1386904761905" y="301.0" />
-              <point x="416.4654761904762" y="301.0" />
-              <point x="416.4654761904762" y="184.0" />
-              <point x="441.9886904761905" y="184.0" />
-              <point x="-29.399999999999977" y="18.5" />
+              <point x="9.75" y="-18.5" />
+              <point x="642.125" y="261.0" />
+              <point x="698.875" y="261.0" />
+              <point x="0.0" y="18.5" />
             </edge>
             <edge source="game.chatt.ChattPanel" target="game.mainFrame.GameFrame">
-              <point x="55.833333333333314" y="18.5" />
-              <point x="901.5220238095237" y="194.0" />
-              <point x="893.4776785714286" y="194.0" />
-              <point x="893.4776785714286" y="351.0" />
-              <point x="576.1386904761905" y="351.0" />
-              <point x="55.25" y="-18.5" />
+              <point x="50.25" y="18.5" />
+              <point x="117.25" y="321.0" />
+              <point x="583.625" y="321.0" />
+              <point x="-48.75" y="-18.5" />
             </edge>
-            <edge source="game.serverConnection.ServerReader" target="game.gamePanel.Paper">
-              <point x="16.77777777777777" y="-18.5" />
-              <point x="539.0774801587302" y="154.0" />
-              <point x="667.7886904761905" y="154.0" />
-              <point x="-40.39999999999998" y="18.5" />
+            <edge source="game.serverConnection.ServerHandler" target="game.mainFrame.GameFrame">
+              <point x="19.625" y="18.5" />
+              <point x="460.47124999999994" y="271.0" />
+              <point x="616.125" y="271.0" />
+              <point x="-16.25" y="-18.5" />
             </edge>
-            <edge source="game.gamePanel.Paper" target="game.serverConnection.ServerPrint">
-              <point x="-25.25" y="-18.5" />
-              <point x="682.9386904761905" y="57.0" />
-              <point x="795.3654761904762" y="57.0" />
-              <point x="-53.6" y="18.5" />
+            <edge source="game.mainFrame.GameFrame" target="game.serverConnection.ServerHandler">
+              <point x="-22.75" y="-18.5" />
+              <point x="609.625" y="281.0" />
+              <point x="421.22124999999994" y="281.0" />
+              <point x="-19.625" y="18.5" />
             </edge>
             <edge source="game.mainFrame.GameFrame" target="game.gamePanel.Paper">
-              <point x="22.75" y="-18.5" />
-              <point x="543.6386904761905" y="301.0" />
-              <point x="791.1330357142857" y="301.0" />
-              <point x="791.1330357142857" y="174.0" />
-              <point x="728.3886904761905" y="174.0" />
-              <point x="20.20000000000006" y="18.5" />
+              <point x="61.75" y="-18.5" />
+              <point x="694.125" y="341.0" />
+              <point x="1109.875" y="341.0" />
+              <point x="1109.875" y="154.0" />
+              <point x="1087.075" y="154.0" />
+              <point x="20.200000000000045" y="18.5" />
             </edge>
             <edge source="game.gamePanel.GamePanel" target="game.gamePanel.Paper">
               <point x="0.0" y="-18.5" />
-              <point x="686.7997023809523" y="174.0" />
-              <point x="708.1886904761905" y="174.0" />
-              <point x="0.0" y="18.5" />
+              <point x="1017.375" y="174.0" />
+              <point x="1026.475" y="174.0" />
+              <point x="-40.39999999999998" y="18.5" />
             </edge>
             <edge source="game.logIn.LogInPanel" target="game.mainFrame.GameFrame">
-              <point x="-27.19999999999999" y="18.5" />
-              <point x="282.6886904761905" y="194.0" />
-              <point x="268.5654761904762" y="194.0" />
-              <point x="268.5654761904762" y="331.0" />
-              <point x="478.6386904761905" y="331.0" />
-              <point x="-42.25" y="-18.5" />
+              <point x="45.33333333333334" y="18.5" />
+              <point x="905.7083333333334" y="301.0" />
+              <point x="668.125" y="301.0" />
+              <point x="35.75" y="-18.5" />
+            </edge>
+            <edge source="game.serverConnection.ServerHandler" target="game.serverConnection.ServerReader">
+              <point x="-67.28571428571433" y="-18.5" />
+              <point x="373.5605357142856" y="174.0" />
+              <point x="307.25" y="174.0" />
+              <point x="-56.625" y="18.5" />
+            </edge>
+            <edge source="game.serverConnection.ServerReader" target="game.serverConnection.ServerHandler">
+              <point x="18.875" y="18.5" />
+              <point x="382.75" y="154.0" />
+              <point x="418.4176785714285" y="154.0" />
+              <point x="-22.428571428571445" y="-18.5" />
             </edge>
             <edge source="game.mainFrame.GameFrame" target="game.gamePanel.GamePanel">
-              <point x="16.25" y="-18.5" />
-              <point x="537.1386904761905" y="291.0" />
-              <point x="686.7997023809523" y="291.0" />
+              <point x="42.25" y="-18.5" />
+              <point x="674.625" y="311.0" />
+              <point x="1017.375" y="311.0" />
               <point x="0.0" y="18.5" />
             </edge>
             <edge source="game.mainFrame.GameFrame" target="game.highscore.HighScorePanel">
-              <point x="-68.25" y="-18.5" />
-              <point x="452.6386904761905" y="371.0" />
-              <point x="42.0" y="371.0" />
-              <point x="-42.0" y="18.5" />
+              <point x="-35.75" y="-18.5" />
+              <point x="596.625" y="301.0" />
+              <point x="280.0" y="301.0" />
+              <point x="42.0" y="18.5" />
             </edge>
             <edge source="game.mainFrame.Game" target="game.mainFrame.GameFrame">
               <point x="0.0" y="-18.5" />
               <point x="0.0" y="18.5" />
             </edge>
-            <edge source="game.mainFrame.GameFrame" target="game.database.Score">
-              <point x="-55.25" y="-18.5" />
-              <point x="465.6386904761905" y="351.0" />
-              <point x="178.5" y="351.0" />
-              <point x="178.5" y="194.0" />
-              <point x="171.8886904761905" y="194.0" />
-              <point x="0.0" y="18.5" />
-            </edge>
-            <edge source="game.mainFrame.GameFrame" target="game.serverConnection.ServerReader">
-              <point x="-9.75" y="-18.5" />
-              <point x="511.1386904761905" y="281.0" />
-              <point x="465.6747023809524" y="281.0" />
-              <point x="-56.625" y="18.5" />
-            </edge>
-            <edge source="game.mainFrame.GameFrame" target="game.serverConnection.ServerPrint">
+            <edge source="game.gamePanel.Paper" target="game.mainFrame.GameFrame">
+              <point x="40.400000000000034" y="18.5" />
+              <point x="1107.275" y="144.0" />
+              <point x="1116.375" y="144.0" />
+              <point x="1116.375" y="351.0" />
+              <point x="700.625" y="351.0" />
               <point x="68.25" y="-18.5" />
-              <point x="589.1386904761905" y="371.0" />
-              <point x="929.6886904761905" y="371.0" />
-              <point x="929.6886904761905" y="57.0" />
-              <point x="902.5654761904761" y="57.0" />
-              <point x="53.599999999999966" y="18.5" />
+            </edge>
+            <edge source="game.mainFrame.GameFrame" target="game.database.Score">
+              <point x="-3.25" y="-18.5" />
+              <point x="629.125" y="251.0" />
+              <point x="614.875" y="251.0" />
+              <point x="614.875" y="57.0" />
+              <point x="517.3986607142856" y="57.0" />
+              <point x="37.5" y="18.5" />
+            </edge>
+            <edge source="game.serverConnection.ServerHandler" target="game.database.Score">
+              <point x="67.28571428571433" y="-18.5" />
+              <point x="508.1319642857143" y="174.0" />
+              <point x="603.875" y="174.0" />
+              <point x="603.875" y="67.0" />
+              <point x="492.39866071428565" y="67.0" />
+              <point x="12.5" y="18.5" />
             </edge>
             <edge source="game.mainFrame.GameFrame" target="game.logIn.LogInPanel">
-              <point x="-35.75" y="-18.5" />
-              <point x="485.1386904761905" y="321.0" />
-              <point x="289.1886904761905" y="321.0" />
-              <point x="289.1886904761905" y="194.0" />
-              <point x="309.8886904761905" y="194.0" />
-              <point x="0.0" y="18.5" />
+              <point x="22.75" y="-18.5" />
+              <point x="655.125" y="281.0" />
+              <point x="815.0416666666666" y="281.0" />
+              <point x="-45.333333333333336" y="18.5" />
+            </edge>
+            <edge source="game.serverConnection.ServerHandler" target="game.serverConnection.ServerPrint">
+              <point x="44.85714285714289" y="-18.5" />
+              <point x="485.70339285714283" y="164.0" />
+              <point x="559.875" y="164.0" />
+              <point x="33.5" y="18.5" />
             </edge>
             <edge source="game.highscore.HighScorePanel" target="game.database.Score">
               <point x="0.0" y="-18.5" />
-              <point x="84.0" y="194.0" />
-              <point x="138.55535714285713" y="194.0" />
-              <point x="-33.33333333333337" y="18.5" />
+              <point x="238.0" y="57.0" />
+              <point x="442.39866071428565" y="57.0" />
+              <point x="-37.5" y="18.5" />
             </edge>
             <edge source="game.serverConnection.ServerReader" target="game.database.Score">
-              <point x="-67.11111111111109" y="-18.5" />
-              <point x="455.1885912698413" y="164.0" />
-              <point x="205.22202380952388" y="164.0" />
-              <point x="33.33333333333337" y="18.5" />
-            </edge>
-            <edge source="game.serverConnection.ServerReader" target="game.signUp.SignUpPanel">
               <point x="0.0" y="-18.5" />
-              <point x="522.2997023809523" y="194.0" />
-              <point x="530.1886904761905" y="194.0" />
-              <point x="58.80000000000001" y="18.5" />
-            </edge>
-            <edge source="game.chatt.ChattPanel" target="game.serverConnection.ServerPrint">
-              <point x="0.0" y="-18.5" />
-              <point x="845.6886904761905" y="67.0" />
-              <point x="848.9654761904762" y="67.0" />
-              <point x="0.0" y="18.5" />
+              <point x="363.875" y="67.0" />
+              <point x="467.39866071428565" y="67.0" />
+              <point x="-12.5" y="18.5" />
             </edge>
             <edge source="game.mainFrame.GameFrame" target="game.chatt.ChattPanel">
-              <point x="35.75" y="-18.5" />
-              <point x="556.6386904761905" y="321.0" />
-              <point x="854.5675595238096" y="321.0" />
-              <point x="854.5675595238096" y="194.0" />
-              <point x="834.5220238095237" y="194.0" />
-              <point x="-11.166666666666686" y="18.5" />
-            </edge>
-            <edge source="game.serverConnection.ServerReader" target="game.logIn.LogInPanel">
-              <point x="-33.55555555555554" y="-18.5" />
-              <point x="488.74414682539685" y="144.0" />
-              <point x="364.2886904761905" y="144.0" />
-              <point x="54.39999999999998" y="18.5" />
+              <point x="-61.75" y="-18.5" />
+              <point x="570.625" y="341.0" />
+              <point x="50.25" y="341.0" />
+              <point x="-16.75" y="18.5" />
             </edge>
             <edge source="game.signUp.SignUpPanel" target="game.mainFrame.GameFrame">
-              <point x="-58.80000000000001" y="18.5" />
-              <point x="412.58869047619044" y="174.0" />
-              <point x="409.9654761904762" y="174.0" />
-              <point x="409.9654761904762" y="311.0" />
-              <point x="491.6386904761905" y="311.0" />
-              <point x="-29.25" y="-18.5" />
-            </edge>
-            <edge source="game.serverConnection.ServerReader" target="game.mainFrame.GameFrame">
-              <point x="18.875" y="18.5" />
-              <point x="541.1747023809523" y="271.0" />
-              <point x="524.1386904761905" y="271.0" />
-              <point x="3.25" y="-18.5" />
+              <point x="49.0" y="18.5" />
+              <point x="747.875" y="271.0" />
+              <point x="648.625" y="271.0" />
+              <point x="16.25" y="-18.5" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="183.5" y="204.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="25.0" y="142.5" />
           <SelectedNodes>
-            <node>game.serverConnection.ServerReader</node>
+            <node>game.serverConnection.ServerHandler</node>
           </SelectedNodes>
           <Categories />
           <SCOPE>All</SCOPE>
@@ -1746,41 +1304,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/serverConnection/ServerHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/game/gamePanel/Paper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/mainFrame/GameFrame.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="46" column="27" lean-forward="false" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+        <state relative-caret-position="226">
+          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding>
+            <element signature="e#5675#5676#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/highscore/HighScorePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="38" column="44" lean-forward="false" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1797#1798#0" expanded="true" />
-            <element signature="e#1836#1837#0" expanded="true" />
-            <element signature="method#signUpRequest#0;class#GameFrame#0" expanded="false" />
-            <element signature="method#updateScore#0;class#GameFrame#0" expanded="false" />
-            <element signature="method#drawFirstLogIn#0;class#GameFrame#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/serverConnection/ServerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="57" column="31" lean-forward="false" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
+          <folding>
+            <element signature="method#ServerHandler#0;class#ServerHandler#0" expanded="false" />
+            <element signature="e#740#741#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#1700#1701#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/serverConnection/ServerPrint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#348#349#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/serverConnection/ServerReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+        <state relative-caret-position="307">
+          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
           <folding>
-            <element signature="method#ServerReader#0;class#ServerReader#0" expanded="false" />
-            <element signature="method#signUp#0;class#ServerReader#0" expanded="false" />
-            <element signature="method#login#0;class#ServerReader#0" expanded="false" />
-            <element signature="method#getHighScore#0;class#ServerReader#0" expanded="false" />
-            <element signature="method#showMessage#0;class#ServerReader#0" expanded="false" />
-            <element signature="method#showWinnerMessage#0;class#ServerReader#0" expanded="false" />
-            <element signature="method#run#0;class#ServerReader#0" expanded="false" />
+            <element signature="method#getDrawing#0;class#ServerReader#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/mainFrame/GameFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="100" column="27" lean-forward="true" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
+          <folding>
+            <element signature="e#1576#1577#0" expanded="true" />
+            <element signature="e#1615#1616#0" expanded="true" />
+            <element signature="e#2056#2057#0" expanded="true" />
+            <element signature="e#2108#2109#0" expanded="true" />
+            <element signature="e#4719#4720#0" expanded="true" />
+            <element signature="e#4756#4757#0" expanded="true" />
+            <element signature="e#4797#4798#0" expanded="true" />
+            <element signature="e#4850#4851#0" expanded="true" />
+            <element signature="e#4903#4904#0" expanded="true" />
+            <element signature="e#4944#4945#0" expanded="true" />
           </folding>
         </state>
       </provider>
