@@ -51,10 +51,18 @@ public class ChattPanel extends JPanel{
         add(scroll);
     }
 
+    /**
+     * @param secretword tells if server waits for secret word or not
+     */
     public void setSecretWordMessage(boolean secretword){
         secretWordMessage = secretword;
     }
 
+    /**
+     * Display message in chatt
+     *
+     * @param message new chatt message
+     */
     public void displayMessage(String message){
         messageView.append(message + "\n\n");
     }

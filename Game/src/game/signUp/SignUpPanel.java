@@ -48,10 +48,17 @@ public class SignUpPanel extends JPanel {
         errorMessage.setText("");
     }
 
+    /**
+     * Show an error message to the user.
+     * @param message error message
+     */
     public void setErrorMessage(String message){
         errorMessage.setText(message);
     }
 
+    /**
+     * Initializes all components that is used in the panel.
+     */
     private void initializePanelComponents(){
         username = new JTextField();
         username.setPreferredSize(TEXT_FIELD_SIZE);
@@ -70,7 +77,9 @@ public class SignUpPanel extends JPanel {
         invalidInfo.setForeground(Color.RED);
     }
 
-    /* Add all components to panel with custom constraints */
+    /**
+     * Adds all components to panel with custom constraints
+     */
     private void setUpPanelComponents(){
 
         GridBagConstraints constraints = new GridBagConstraints();

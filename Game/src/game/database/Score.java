@@ -13,10 +13,16 @@ public class Score implements Serializable, Comparable {
         this.name = name;
     }
 
+    /**
+     * @return number of scores
+     */
     public int getScore() {
         return score;
     }
 
+    /**
+     * @return username
+     */
     public String getName() {
         return name;
     }

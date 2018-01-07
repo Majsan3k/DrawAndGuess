@@ -16,6 +16,12 @@ public class ServerHandler {
     private ServerPrinter serverPrinter;
     private ServerReader serverReader;
 
+    /**
+     * Constructor. Create a ServerPrinter and a serverWriter and start a serverReader thread
+     * @param gf GameFrame that the Serverhandler is connected to
+     * @param socket socket to be used for server communication
+     * @throws IOException shows for problem with creating a ServerPrinter
+     */
     public ServerHandler(GameFrame gf, Socket socket) throws IOException{
         this.gameFrame = gf;
         this.serverPrinter = new ServerPrinter(socket);
@@ -31,6 +37,7 @@ public class ServerHandler {
     }
 
     /* Communication between GameFrame and ServerReader */
+
     public synchronized ArrayList<Score> getHighScore(){
         return serverReader.getHighScore();
     }
@@ -53,7 +60,7 @@ public class ServerHandler {
         gameFrame.showMessageHandler(username, message);
     }
 
-    public void showWinnerMessage(String name, String message){
+    public synchronized void showWinnerMessage(String name, String message){
         gameFrame.showWinnerMessageHandler(name, message);
     }
 
@@ -64,7 +71,7 @@ public class ServerHandler {
         gameFrame.updateScoreHandler(scores);
     }
 
-    public void addPoint(Point point){
+    public synchronized void addPoint(Point point){
         gameFrame.addPointHandler(point);
     }
 
@@ -75,5 +82,4 @@ public class ServerHandler {
     public void setPainter(boolean painter){
         gameFrame.setPainterHandler(painter);
     }
-
 }

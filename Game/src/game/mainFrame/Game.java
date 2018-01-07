@@ -1,13 +1,16 @@
 package game.mainFrame;
 
-import game.mainFrame.GameFrame;
-
 import java.io.IOException;
 import java.net.Socket;
 import java.net.SocketException;
 
 public class Game {
 
+    /**
+     * Starts the game. Set host to 127.0.0.1 and port to 2000 if user doesn't
+     * specify them.
+     * @param args maximum 2 arguments, the first is the host, second the port
+     */
     public static void main(String args[]) {
 
         String host = "127.0.0.1";

@@ -27,24 +27,42 @@ public class GamePanel extends JPanel{
         add(paper, BorderLayout.CENTER);
     }
 
-    public void sendPoint(String message){
+    /**
+     * Send point to server
+     * @param message the point to be send
+     */
+    public synchronized void sendPoint(String message){
         gameFrame.writeToServer(message);
     }
 
-    public void addPoint(Point point){
+    /**
+     * Add point to paper
+     * @param point point to be added
+     */
+    public synchronized void addPoint(Point point){
         paper.addPoint(point);
     }
 
-    public void setDrawing(HashSet<Point> drawing){
+    /**
+     * Set current drawing
+     * @param drawing new drawing
+     */
+    public synchronized void setDrawing(HashSet<Point> drawing){
         paper.setDrawing(drawing);
         paper.repaint();
     }
 
+    /**
+     * @param painter information about if user is painter or not
+     */
     public void setPainter(boolean painter){
         paper.setPainter(painter);
     }
 
-    public void clearPaper(){
+    /**
+     * Clear the drawing
+     */
+    public synchronized void clearPaper(){
         paper.clearPaper();
     }
 }

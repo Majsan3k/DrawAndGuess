@@ -45,9 +45,7 @@ public class GameFrame extends JFrame{
 
         loginMode();
 
-        //TODO: Ta bort, bara för testning
         loginRequest("Maja", "aaaaaa");
-
         pack();
         setVisible(true);
     }
@@ -56,6 +54,9 @@ public class GameFrame extends JFrame{
         title.setText(newTitle);
     }
 
+    /**
+     * Start page. User can choose between login or signup.
+     */
     public void loginMode(){
         setHeader("Welcome");
         if(signUpPanel != null){
@@ -66,6 +67,9 @@ public class GameFrame extends JFrame{
         repaint();
     }
 
+    /**
+     * Goes to signup page.
+     */
     public void signUp(){
         remove(logInPanel);
         add(signUpPanel);
@@ -89,7 +93,9 @@ public class GameFrame extends JFrame{
     /**
      * Update the whole GameFrame. Removes the loginPanel and add highScorePanel,
      * GamePanel and chattPanel.
-     * Asks server for the current drawing and draw it on gamePanel.
+     * Asks server for the current drawing and draw it on gamePanel. Also asks for
+     * the highscore and update the highScorePanel with it.
+     *
      * @param username
      */
     public synchronized void login(String username){
@@ -105,13 +111,20 @@ public class GameFrame extends JFrame{
     }
 
     /**
-     * Gets the current drawing from server and paints it on gamePanel
+     * Gets the current drawing from server and paints it on gamePanel.
      */
     public synchronized void drawCurrentDrawing(HashSet<Point> drawing){
         gamePanel.setDrawing(drawing);
     }
 
     /* Handlers for handling commands from ServerHandler */
+
+    /**
+     * Checks if the signup was approved by the server and then go back to login mode. Else show
+     * errormessage.
+     *
+     * @param signupStatus information from server, tells if the signup was approved
+     */
     public void signUpHandler(String signupStatus){
         if(signupStatus.equalsIgnoreCase("OK")){
             signUpPanel.clearFields();
@@ -122,7 +135,7 @@ public class GameFrame extends JFrame{
     }
 
     /**
-     * Handles login. Check if the login passed on server side and if the user is the painter.
+     * Handles login. Checks if the login passed on server side and if the user is the painter.
      *
      * @param loginStatus information from server if the login passed
      * @param painterStatus tells if painter or not
@@ -144,13 +157,12 @@ public class GameFrame extends JFrame{
     }
 
     /**
-     * Handles chattmessages from server
-     *
+     * Handles chattmessages from server.
      * @param username name of the user that wrote the mssage
      * @param message
      */
     public void showMessageHandler(String username, String message){
-        if(message.trim().contains("logged out")){
+        if(message.trim().contains("logged out. The new painter")){
             gamePanel.clearPaper();
         }
         chattPanel.displayMessage(username.toUpperCase() + ": " + message);
@@ -167,7 +179,7 @@ public class GameFrame extends JFrame{
     }
 
     /**
-     * Update highscore panel
+     * Update highscore panel.
      * @param scores
      */
     public synchronized void updateScoreHandler(ArrayList<Score> scores){
@@ -178,7 +190,7 @@ public class GameFrame extends JFrame{
      * Add point to gamePanel
      * @param point
      */
-    public void addPointHandler(Point point){
+    public synchronized void addPointHandler(Point point){
         gamePanel.addPoint(point);
     }
 

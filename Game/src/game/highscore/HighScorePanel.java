@@ -29,6 +29,10 @@ public class HighScorePanel extends JPanel{
         add(scroll);
     }
 
+    /**
+     * Fills the highscore table with the 10 best players.
+     * @param scores highscore from database
+     */
     public void fillHighscoreField(ArrayList<Score> scores){
         highscoreField.setText("");
         for(int i = 1; i < 11; i++){

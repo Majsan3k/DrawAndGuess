@@ -1,15 +1,10 @@
 package game;
 
-import game.database.Score;
-
 import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.ObjectOutputStream;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.HashSet;
 
 public class PlayerHandler implements Runnable {
 
@@ -29,6 +24,9 @@ public class PlayerHandler implements Runnable {
         }
     }
 
+    /**
+     * Listens for messages from Client
+     */
     @Override
     public void run() {
         String inData;
@@ -45,25 +43,25 @@ public class PlayerHandler implements Runnable {
                         String password = command[2];
                         server.login(username, password, socket);
                         break;
-                    case "getHighScore" :
-                        server.sendHighscore(socket);
-                        break;
-                    case "secretword" :
-                        server.setSecretWord(command[1], socket);
-                        break;
                     case "message" :
-                        server.broadCastMessage("message:", command[1] + ":" + username);
+                        server.broadcastMessage("message:", command[1] + ":" + username);
                         if(server.checkSecretWord(command[1], socket)){
                             server.winnerMessage(username);
                         }
                         break;
+                    case "getHighScore" :
+                        server.sendHighscore(socket);
+                        break;
                     case "draw" :
                         String[] xy = command[1].split(", ");
                         server.addPoint(new Point(Integer.parseInt(xy[0]), Integer.parseInt(xy[1])));
-                        server.broadCastMessage("draw:", command[1]);
+                        server.broadcastMessage("draw:", command[1]);
                         break;
                     case "getdrawing" :
                         server.sendDrawing(socket);
+                        break;
+                    case "secretword" :
+                        server.setSecretWord(command[1], socket);
                         break;
                     default :
                         break;

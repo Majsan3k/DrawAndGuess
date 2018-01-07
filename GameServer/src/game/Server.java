@@ -37,44 +37,24 @@ public class Server implements Runnable {
         }
     }
 
-    public synchronized void sendHighscore(Socket socket){
-        ArrayList<Score> scores = getHighScore();
-        try {
-            objOut = new ObjectOutputStream(socket.getOutputStream());
-            objOut.writeObject(scores);
-            objOut.flush();
-        }catch (IOException e){
-            System.out.println(e.getMessage());
-        }
-    }
-
-    public synchronized void sendDrawing(Socket socket){
-        try {
-            objOut = new ObjectOutputStream(socket.getOutputStream());
-            objOut.writeObject(getDrawing());
-            objOut.flush();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
+    /**
+     * Connect to database to save the new user and then inform the user if the registration
+     * was approved.
+     *
+     * @param username
+     * @param password
+     * @param socket the new users socket
+     */
     public void signUp(String username, String password, Socket socket){
         String signUpStatus = dbCon.createUser(username, password);
         writeToOneSocket(socket, "signup:" + signUpStatus);
     }
 
-    public HashSet<Point> getDrawing(){
-        return drawing;
-    }
-
-    public void addPoint(Point p){
-        drawing.add(p);
-    }
-
     /**
-     * Check if the player already is logged in. If no there's no existing painter, the new player become the painter.
+     * Check if player already is logged in. If no there's no existing painter,
+     * the new player become painter.
      *
-     * @param username the players username
+     * @param username the players username.
      * @param socket the socket that the player is connected to
      */
     public synchronized void login(String username, String password, Socket socket){
@@ -96,30 +76,106 @@ public class Server implements Runnable {
         }
         writeToOneSocket(socket, "login:" + loginStatus + ":" + painterStatus + ":" + username + ":" + "Welcome! You are the new painter! Please write your secret word or sentence.:Server");
         if(loginStatus.equals("OK")) {
-            broadCastMessage("message:", username + " logged in.:server");
+            broadcastMessage("message:", username + " logged in.:server");
             players.put(username, socket);
         }
     }
 
     /**
-     * Decide if the player should be painter. Write to specific socket and tell if it should be a painter or not
-     * @param socket
+     * Send message to all connected sockets.
+     *
+     * @param command tells the user what should be done while receiving the package
+     * @param inData data that needs to perform the command
      */
-    public void setPainter(Socket socket, String username){
-        painterName = username;
-        if(painter != null){
-            writeToOneSocket(painter, "painter:false");
+    public synchronized void broadcastMessage(String command, String inData){
+        for (Map.Entry<String, Socket> s : players.entrySet()) {
+            try {
+                pw = new PrintWriter(s.getValue().getOutputStream(), true);
+                pw.println(command + inData);
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
         }
-        painter = socket;
-        writeToOneSocket(painter, "painter:true");
-        askSecretWord(socket);
     }
 
-
-    /* Secret word handlers */
+    /**
+     * Clear drawing and update score in database. Change the painter to the winner. Inform
+     * all connected users who's the winner and the new painter.
+     *
+     * @param username the winner
+     */
+    public synchronized void winnerMessage(String username){
+        drawing.clear();
+        broadcastMessage("winner:", username + " is the winner and the new painter!:Server");
+        dbCon.updateScore(painterName);
+        dbCon.updateScore(username);
+        setPainter(players.get(username), username);
+        secretWord = null;
+        broadcastMessage("highscore:", "SERVER");
+    }
 
     /**
-     * Set new secret word and accept the secret word to the painter
+     * Send message to a single socket.
+     *
+     * @param socket socket to receive message
+     * @param message the message that will be sent
+     */
+    private synchronized void writeToOneSocket(Socket socket, String message){
+        try {
+            pw = new PrintWriter(socket.getOutputStream(), true);
+            pw.println(message);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    /**
+     * Send highscore as a ArraList of Scores using ObjectOutputStream
+     *
+     * @param socket the socket that the highscore will be sent to
+     */
+    public synchronized void sendHighscore(Socket socket){
+        ArrayList<Score> scores = getHighScore();
+        try {
+            objOut = new ObjectOutputStream(socket.getOutputStream());
+            objOut.writeObject(scores);
+            objOut.flush();
+        }catch (IOException e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+    /**
+     * Add new point to current drawing.
+     *
+     * @param p new point in drawing
+     */
+    public void addPoint(Point p){
+        drawing.add(p);
+    }
+
+    /**
+     * Sends current drawing as a HashSet with Points. Uses the method getDrawing() to find
+     * the current drawing.
+     *
+     * @param socket the socket that the drawing will be sent to
+     */
+    public synchronized void sendDrawing(Socket socket){
+        try {
+            objOut = new ObjectOutputStream(socket.getOutputStream());
+            objOut.writeObject(getDrawing());
+            objOut.flush();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    /* Secret word handlers */
+    /**
+     * Set new secret word and accept inform the painter that it has been approved.
+     * If the user isn't painter the user gets informed that she/he isn't allowed to
+     * choose a secret word.
+     *
      * @param secretWord new secret word
      * @param socket the painter
      */
@@ -133,7 +189,8 @@ public class Server implements Runnable {
     }
 
     /**
-     * Get the secret word
+     * Get the secret word.
+     *
      * @return
      */
     public boolean checkSecretWord(String guess, Socket socket){
@@ -142,63 +199,73 @@ public class Server implements Runnable {
 
     /**
      * Ask painter to decide a secret word
+     *
      * @param socket the painter socket
      */
     public void askSecretWord(Socket socket){
         writeToOneSocket(socket, "secretword:Congratulations, you are the new painter! Please write your secret word or sentence.:SERVER");
     }
 
-    public synchronized ArrayList<Score> getHighScore(){
-        return dbCon.getHighscore();
-    }
 
-    public synchronized void broadCastMessage(String command, String inData){
-        for (Map.Entry<String, Socket> s : players.entrySet()) {
-            try {
-                pw = new PrintWriter(s.getValue().getOutputStream(), true);
-                pw.println(command + inData);
-            } catch (IOException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
-    public synchronized void winnerMessage(String username){
-        drawing.clear();
-        broadCastMessage("winner:", username + " is the winner and the new painter!:Server");
-        dbCon.updateScore(painterName);
-        dbCon.updateScore(username);
-        setPainter(players.get(username), username);
-        secretWord = null;
-        broadCastMessage("highscore:", "SERVER");
-    }
-
-    private synchronized void writeToOneSocket(Socket socket, String message){
-        try {
-            pw = new PrintWriter(socket.getOutputStream(), true);
-            pw.println(message);
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
+    /**
+     * Remove client from the ConcurrentHashMap players and inform all connected users
+     * that the client logget out.
+     * If the client was painter, the painter get changed to the first client in players map.
+     *
+     * @param username user to be removed
+     */
     public synchronized void removeClient(String username){
-
         if(painter == players.get(username)){
             drawing.clear();
             players.remove(username);
             painter = null;
             if(players.size() > 0) {
                 String newPainter = (String)players.keySet().toArray()[0];
-                broadCastMessage("message:", username + " logged out. The new painter is " + newPainter + ".:SERVER");
+                broadcastMessage("message:", username + " logged out. The new painter is " + newPainter + ".:SERVER");
                 setPainter(players.get(newPainter), newPainter);
             }
         }else {
             players.remove(username);
-            broadCastMessage("message:", username + " logged out.:SERVER");
+            broadcastMessage("message:", username + " logged out.:SERVER");
         }
     }
 
+    /**
+     * Decide if the player should be painter. Write to specific socket and tell if it
+     * should be a painter or not.
+     *
+     * @param socket user socket
+     */
+    private void setPainter(Socket socket, String username){
+        painterName = username;
+        if(painter != null){
+            writeToOneSocket(painter, "painter:false");
+        }
+        painter = socket;
+        writeToOneSocket(painter, "painter:true");
+        askSecretWord(socket);
+    }
+
+    /**
+     * Connect to database to get the highscore and then return it.
+     *
+     * @return highscore
+     */
+    private synchronized ArrayList<Score> getHighScore(){
+        return dbCon.getHighscore();
+    }
+
+    /**
+     *
+     * @return current drawing
+     */
+    private HashSet<Point> getDrawing(){
+        return drawing;
+    }
+
+    /**
+     * Waits for new sockets to connect.
+     */
     @Override
     public void run() {
         try{
@@ -218,6 +285,7 @@ public class Server implements Runnable {
             port = Integer.parseInt(args[0]);
         }
         if(args.length > 1){
+            System.out.println("Too many arguments");
             System.exit(1);
         }
         Thread serverThread = new Thread(new Server(port));

@@ -22,23 +22,33 @@ public class Paper extends JPanel {
             @Override
             public void mousePressed(MouseEvent e) {
                 if(painter) {
-                    drawPoint(e.getPoint());
+                    sendPoint(e.getPoint());
                 }
             }
         });
         addMouseMotionListener(new MouseMotionAdapter(){
             public void mouseDragged(MouseEvent e) {
                 if(painter) {
-                    drawPoint(e.getPoint());
+                    sendPoint(e.getPoint());
                 }
             }
         });
     }
 
+    /**
+     * Set the current drawing to the received drawing.
+     *
+     * @param points drawing
+     */
     public void setDrawing(HashSet<Point> points){
         this.points = points;
     }
 
+    /**
+     * Paint all points stored in the HashSet points
+     *
+     * @param g
+     */
     public synchronized void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.setColor(Color.black);
@@ -49,26 +59,36 @@ public class Paper extends JPanel {
         }
     }
 
-    private synchronized void drawPoint(Point p){
-        points.add(p);
-        sendPoint(p);
-        repaint();
-    }
-
+    /**
+     * Add point to HashSet points and repaint drawing
+     *
+     * @param p
+     */
     public synchronized void addPoint(Point p){
         points.add(p);
         repaint();
     }
 
+    /**
+     * @param painter painter status
+     */
     public void setPainter(boolean painter){
         this.painter = painter;
     }
 
+    /**
+     * Remove current drawing and clear the HashSet points.
+     */
     public synchronized void clearPaper(){
         points.clear();
         repaint();
     }
 
+    /**
+     * Converts point to String and sends it to server.
+     *
+     * @param point point to be send to server
+     */
     private void sendPoint(Point point){
         String pointToSend = Integer.toString(point.x) + ", " + Integer.toString(point.y);
         gamePanel.sendPoint("draw:" + pointToSend);

@@ -30,6 +30,10 @@ public class ServerReader implements Runnable{
         }
     }
 
+    /**
+     * Get highscore from server as an ArrayList<Score> through ObjectInputStream
+     * @return highscore
+     */
     public synchronized ArrayList<Score> getHighScore(){
         ArrayList<Score> scores = null;
         try {
@@ -41,6 +45,11 @@ public class ServerReader implements Runnable{
         return scores;
     }
 
+
+    /**
+     * Get drawing from server as an HashSet<Point> through ObjectInputStream
+     * @return current drawing
+     */
     public synchronized HashSet<Point> getDrawing(){
         HashSet<Point> drawing = null;
         try{
@@ -52,12 +61,16 @@ public class ServerReader implements Runnable{
         return drawing;
     }
 
+    /**
+     * Listens for messages from server.
+     */
     @Override
     public void run() {
         String message;
         try {
             while((message = serverIn.readLine()) != null){
                 String[] command = message.split(":");
+
                 switch (command[0]){
                     case "signup" :
                         serverHandler.signUp(command[1]);

@@ -25,17 +25,31 @@ public class DatabaseConnection {
     private Statement stmt = null;
     private Connection dbCon = null;
 
+    /**
+     * Encrypt password.
+     * @param password_plaintext password
+     * @return the encrypted password
+     */
     private static String hashPassword(String password_plaintext) {
         return BCrypt.hashpw(password_plaintext, BCrypt.gensalt());
     }
 
-    public static boolean checkPassword(String password_plaintext, String stored_hash) {
+    /**
+     * Decrypt password and compare with the password in plain text.
+     * @param password_plaintext password to be checked
+     * @param stored_hash the stored encrypted password
+     * @return true if the passwords matches, otherwise false
+     */
+    private static boolean checkPassword(String password_plaintext, String stored_hash) {
         if(stored_hash == null || !stored_hash.startsWith("$2a$")) {
             throw new java.lang.IllegalArgumentException("Invalid hash provided for comparison");
         }
         return BCrypt.checkpw(password_plaintext, stored_hash);
     }
 
+    /**
+     * Connect to the mysql database
+     */
     private void connectToDb(){
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -52,6 +66,9 @@ public class DatabaseConnection {
         }
     }
 
+    /**
+     * Close statements and connections.
+     */
     private void close(){
         try {
             if (prepStmt != null) {
@@ -68,6 +85,12 @@ public class DatabaseConnection {
         }
     }
 
+    /**
+     * Insert username and encrypted password to database.
+     * @param userName new username
+     * @param password new password
+     * @return status about if the registration was approved or not
+     */
     public String createUser(String userName, String password){
         connectToDb();
         int userId = 0;
@@ -96,6 +119,12 @@ public class DatabaseConnection {
         return "OK";
     }
 
+    /**
+     * Asks database for the user's password and compares it with the given password.
+     * @param username user to log in
+     * @param password given password
+     * @return true if password and username matches, else false
+     */
     public boolean login(String username, String password) {
         connectToDb();
 
@@ -117,6 +146,12 @@ public class DatabaseConnection {
         return false;
     }
 
+    /**
+     * Insert new score in database.
+     * @param score the score to be inserted
+     * @param userId userId that have the score
+     * @return status of the insertion
+     */
     public String insertScore(int score, int userId){
         connectToDb();
         prepStmt = null;
@@ -135,6 +170,10 @@ public class DatabaseConnection {
         return "OK";
     }
 
+    /**
+     * Update score for the given user.
+     * @param username the user whose score should be updated
+     */
     public void updateScore(String username){
         connectToDb();
         try{
@@ -148,6 +187,10 @@ public class DatabaseConnection {
         }
     }
 
+    /**
+     * Get highscores from database
+     * @return all highscores from database
+     */
     public ArrayList<Score> getHighscore(){
         connectToDb();
         ArrayList<Score> scores = new ArrayList<>();

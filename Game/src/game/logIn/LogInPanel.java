@@ -43,6 +43,9 @@ public class LogInPanel extends JPanel {
         });
     }
 
+    /**
+     * Initializes all components that is used in the panel.
+     */
     private void initializePanelComponents(){
         errorMessage = new JLabel("", JLabel.CENTER);
         errorMessage.setPreferredSize(new Dimension(200, 20));
@@ -58,6 +61,9 @@ public class LogInPanel extends JPanel {
         signUp = new JLabel("Sign up");
     }
 
+    /**
+     * Adds all components to panel with custom constraints
+     */
     private void setUpPanelComponents(){
         GridBagConstraints constraints = new GridBagConstraints();
         constraints.gridx = 0;
@@ -80,6 +86,10 @@ public class LogInPanel extends JPanel {
         add(signUp, constraints);
     }
 
+    /**
+     * Show an error message to the user.
+     * @param message error message
+     */
     public void setErrorMessage(String message){
         errorMessage.setText(message);
     }
