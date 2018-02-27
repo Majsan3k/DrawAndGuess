@@ -9,7 +9,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-//TODO: Ska metoderna vara privata? Och ha en typ switch-metod som anropas istället?
 public class DatabaseConnection {
 
     //SQL-queries
